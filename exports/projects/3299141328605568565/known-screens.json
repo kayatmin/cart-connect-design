@@ -1,5 +1,22 @@
 [
-  {"id":"2353a4ab88444c0ebb5a230913e0a200","title":"CartConnect Login","name":"projects/3299141328605568565/screens/2353a4ab88444c0ebb5a230913e0a200"},
-  {"id":"0224090f2973466690cc8e05f6bdf625","title":"Agent Dashboard","name":"projects/3299141328605568565/screens/0224090f2973466690cc8e05f6bdf625"},
-  {"id":"164a9bcb761645fab2c5621131f44a45","title":"Live Session Detail","name":"projects/3299141328605568565/screens/164a9bcb761645fab2c5621131f44a45"}
+  {
+    "id": "2353a4ab88444c0ebb5a230913e0a200",
+    "title": "CartConnect Login",
+    "name": "projects/3299141328605568565/screens/2353a4ab88444c0ebb5a230913e0a200"
+  },
+  {
+    "id": "0224090f2973466690cc8e05f6bdf625",
+    "title": "Agent Dashboard",
+    "name": "projects/3299141328605568565/screens/0224090f2973466690cc8e05f6bdf625"
+  },
+  {
+    "id": "164a9bcb761645fab2c5621131f44a45",
+    "title": "Live Session Detail",
+    "name": "projects/3299141328605568565/screens/164a9bcb761645fab2c5621131f44a45"
+  },
+  {
+    "id": "39808ef410d144ad85ac3a72ff733a56",
+    "title": "Inventory Search & Add",
+    "name": "projects/3299141328605568565/screens/39808ef410d144ad85ac3a72ff733a56"
+  }
 ]
