@@ -19,11 +19,13 @@ if (!fs.existsSync(promptPath)) {
 }
 
 const prompt = fs.readFileSync(promptPath, 'utf8').trim();
-const payload = JSON.stringify({ projectId, prompt }, null, 2);
+const payloadObject = { projectId, deviceType: 'mobile', prompt };
+const payload = JSON.stringify(payloadObject, null, 2);
 const payloadPath = path.join(repoRoot, 'generated', `${screen}.request.json`);
 fs.writeFileSync(payloadPath, payload + '\n');
 
-const command = `source scripts/load-stitch-env.sh && npx @_davideast/stitch-mcp tool ${toolName} -d @${JSON.stringify(payloadPath)}`;
+const inlinePayload = JSON.stringify(payloadObject);
+const command = `source scripts/load-stitch-env.sh && npx @_davideast/stitch-mcp tool ${toolName} -d ${JSON.stringify(inlinePayload)}`;
 const result = spawnSync('bash', ['-lc', command], {
   cwd: repoRoot,
   encoding: 'utf8'

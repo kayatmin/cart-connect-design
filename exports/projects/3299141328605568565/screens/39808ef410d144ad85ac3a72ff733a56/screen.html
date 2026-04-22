@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c0c6d9",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#8394bc",
+                    "tertiary": "#251400",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "error-container": "#ffdad6",
+                    "background": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed-dim": "#eabf89",
+                    "surface-container-low": "#f3f4f5",
+                    "secondary-container": "#dadff2",
+                    "on-tertiary-fixed-variant": "#5e4116",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-fixed": "#2a1800",
+                    "on-primary-fixed": "#061b3c",
+                    "surface-container-high": "#e7e8e9",
+                    "outline": "#75777f",
+                    "on-tertiary-container": "#b38d5b",
+                    "secondary-fixed": "#dde2f5",
+                    "secondary": "#585e6e",
+                    "surface-variant": "#e1e3e4",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#402700",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-tint": "#4d5e83",
+                    "primary-fixed": "#d8e2ff",
+                    "primary-container": "#1a2c4e",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "outline-variant": "#c5c6cf",
+                    "surface": "#f8f9fa",
+                    "on-secondary-fixed-variant": "#414756",
+                    "on-secondary-fixed": "#151b29",
+                    "tertiary-fixed": "#ffddb5",
+                    "primary": "#021738",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#35466a",
+                    "surface-bright": "#f8f9fa",
+                    "on-surface-variant": "#44474e",
+                    "primary-fixed-dim": "#b5c6f1",
+                    "on-secondary-container": "#5c6273",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "on-background": "#191c1d",
+                    "inverse-primary": "#b5c6f1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2e7d32;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar Section -->
+<header class="bg-slate-50/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_12px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-full">
+<div class="flex items-center gap-3">
+<button class="text-[#1A2C4E] hover:bg-slate-200/50 transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-headline font-extrabold text-[#1A2C4E] text-xl tracking-tight leading-tight">Inventory Management</h1>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="pulse-dot"></span>
+<p class="text-on-secondary-fixed-variant text-[12px] font-medium uppercase tracking-wider">Adding to Jane Doe's Cart (2 items)</p>
+</div>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a female store agent with a friendly expression in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLONEvY_WHUfIwwYMyMCK7oqintpOFKdjGUhJ02WT0Wfs0JLmkc88ZX7GPMqJIr190T-cu1RTYauq3g_oXWF0b0cSMUyY8y7GINES6u2YosEb825C12RexOerk3G3F5sxb0OaZJ1FguFW0CbzyozZi28PMTmejbnDUgQBnHkqhNLia1JHZ_cOCJ6Eg93Ja1GcCvlZGu4d-tRqCGUFxGvqWDE-afAAP9OZRllnGveP9bXqnHLOpFq-n7yGa9EDhnQP6ajKUBWHUAdI"/>
+</div>
+</div>
+</header>
+<main class="px-5 pt-6 space-y-8">
+<!-- Search & Context Section -->
+<section class="space-y-4">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 pl-12 pr-14 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/40 transition-all text-body-md" placeholder="Search inventory..." type="text"/>
+<button class="absolute inset-y-0 right-4 flex items-center text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+</button>
+</div>
+<!-- Category Chips -->
+<div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar -mx-5 px-5">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label font-medium text-sm whitespace-nowrap active:scale-95 transition-all">All</button>
+<button class="bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label font-medium text-sm whitespace-nowrap transition-all border border-transparent">Electronics</button>
+<button class="bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label font-medium text-sm whitespace-nowrap transition-all border border-transparent">Accessories</button>
+<button class="bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high px-6 py-2 rounded-full font-label font-medium text-sm whitespace-nowrap transition-all border border-transparent">Home Office</button>
+</div>
+<!-- Recent Queries -->
+<div class="flex flex-wrap gap-2 items-center">
+<span class="text-outline text-xs font-semibold uppercase tracking-widest mr-2">Recent:</span>
+<button class="bg-surface-container text-on-secondary-fixed-variant px-3 py-1 rounded-lg text-xs font-medium hover:bg-surface-container-high transition-colors">USB-C Cable</button>
+<button class="bg-surface-container text-on-secondary-fixed-variant px-3 py-1 rounded-lg text-xs font-medium hover:bg-surface-container-high transition-colors">Standing Desk</button>
+</div>
+</section>
+<!-- Inventory List -->
+<section class="space-y-6">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline font-bold text-2xl text-primary tracking-tight">Available Stock</h2>
+<span class="text-outline text-sm font-medium">124 Items</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center shadow-[0_12px_40px_rgba(25,28,29,0.06)] hover:shadow-lg transition-shadow group">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern professional 4K webcam with a sleek dark finish and adjustable clip on a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp4rpVjcFOpxdsYEI6PgMYgc8OXBVgosu8mCjq_jENz0JHZU0fLq-4T4MzR5X7A8K46FOo2brxihsMqPV0qkcWTslCzg8n9OqpNBh849C-FCK8biLZ0EQufbo3qR4Qn5mjOYr4SHBqHk0rMoOLVjmoLiiIAk_0iejASIu_ABUnqOW-qt6iwWqMvP_-tqLbcp12A1p8dgoHwQ5hGSvs4cTwi4Q5T4ahPk7XTULs4ZfLko-07dTbkZsLW_O1fUq47Y1ZN4XaWXnnRJM"/>
+</div>
+<div class="ml-4 flex-grow">
+<h3 class="font-headline font-bold text-on-surface leading-snug">Professional Webcam</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold text-lg">$89.00</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">In Stock</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-xl flex items-center justify-center shadow-md active:scale-90 transition-all hover:bg-primary-container">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center shadow-[0_12px_40px_rgba(25,28,29,0.06)] group">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Durable braided USB-C to lightning cable in space grey lying on a minimalist white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG4q4MjzU6E0bjt_wzZhhiPzrg8JC7xY6qDCYmM5IqwDPbezJuSNzRChsQAZLZS9UZ2buBobUFeRe5ZD7PYw612tKwPPmQWF29aeE8PZbGAfm4kId3ywmnhNsHk6IvCvkEc24Mxa2RNPRwYASWC6CM4vCo9CRYqD_4C6yOOj51Ibnhwb8csg43htI80-vn_oKapWi7oFsWUjcXuF5VzxlfLSjHZvjJL-YBPBRahSeUHD2OVfktIzPzX888nrE6mOdfXMuoPh_lv9o"/>
+</div>
+<div class="ml-4 flex-grow">
+<h3 class="font-headline font-bold text-on-surface leading-snug">Braided USB-C Cable</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold text-lg">$24.99</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">In Stock</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-xl flex items-center justify-center shadow-md active:scale-90 transition-all hover:bg-primary-container">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center shadow-[0_12px_40px_rgba(25,28,29,0.06)] group">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Adjustable electric standing desk with a light wood top and white frame in a bright home office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMyNOiZx7u98Ql1J5fuOsO8DopL-diCbePfHQrdPfP3uxT_qpLHCTsfOBAOIW2sG4_QxG_s_ewhPUoTbP7-GlVudNvpGJ4eNE096O2f0gjsn4r0bMvRqw2HuvhLAUsXkmAvoe8xVzV9p-vSvD8a82fH4XYaRAdqofP59nh3bsJMZ6mDZitgDP4AXAVjki1JMqJI0f8qMztvSQ3xPL2IHcrIk2eGVHSY-sdgyfKRaFU-8a0QsYl2dUTOAKkf54dcGVgWBGjufnSnWs"/>
+</div>
+<div class="ml-4 flex-grow">
+<h3 class="font-headline font-bold text-on-surface leading-snug">Premium Standing Desk</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold text-lg">$449.00</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">In Stock</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-xl flex items-center justify-center shadow-md active:scale-90 transition-all hover:bg-primary-container">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 flex items-center shadow-[0_12px_40px_rgba(25,28,29,0.06)] group opacity-75">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container-low flex-shrink-0 grayscale">
+<img class="w-full h-full object-cover" data-alt="Digital tablet device with high resolution screen and slim bezel on a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX7goo4nTnngwKPpKp5rTSBhptHwuujazhOGyZ8lODYZPhmnwHW5wVy6W6yCh-tBHLCp4HlIaHtf3bLLSERX6Hk5ZYjgDZWw047iIeRU204JYjHOjnVaDaLGCYPqHtgeZ2sCMjZ7GrtyUUcRjIY2M1IyLaBVCJQOBXxYcaDffM7CCGJrato1YFiBxGQOaRcJJtFg1zHzEroefxt4qQ6JBIXWoE-R3rDBynmPYns3wMJs0exctYdz1C2ZChEBjQHDEnxw3rI2oaBLE"/>
+</div>
+<div class="ml-4 flex-grow">
+<h3 class="font-headline font-bold text-on-surface leading-snug">Ultra Tablet 11"</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-primary font-bold text-lg">$799.00</span>
+<span class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Out of Stock</span>
+</div>
+</div>
+<button class="bg-surface-container-high text-outline w-12 h-12 rounded-xl flex items-center justify-center cursor-not-allowed">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-slate-50/90 backdrop-blur-lg rounded-t-[1.5rem] shadow-[0_-8px_30px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center bg-[#1A2C4E] text-white rounded-2xl px-5 py-2 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#1A2C4E] px-5 py-2 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#1A2C4E] px-5 py-2 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-[#1A2C4E] px-5 py-2 active:scale-90 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-[11px] font-medium uppercase tracking-wider mt-1">Settings</span>
+</a>
+</nav>
+</body></html>
