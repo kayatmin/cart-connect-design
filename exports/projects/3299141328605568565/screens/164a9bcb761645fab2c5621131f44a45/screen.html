@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CartConnect Live Session</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffddb5",
+                    "surface-bright": "#f8f9fa",
+                    "inverse-surface": "#2e3132",
+                    "secondary-container": "#dadff2",
+                    "on-secondary-container": "#5c6273",
+                    "on-surface-variant": "#44474e",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#402700",
+                    "surface-variant": "#e1e3e4",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "outline-variant": "#c5c6cf",
+                    "primary-container": "#1a2c4e",
+                    "primary": "#021738",
+                    "surface-dim": "#d9dadb",
+                    "surface-tint": "#4d5e83",
+                    "surface-container-high": "#e7e8e9",
+                    "on-surface": "#191c1d",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#414756",
+                    "inverse-primary": "#b5c6f1",
+                    "tertiary-fixed-dim": "#eabf89",
+                    "on-background": "#191c1d",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#151b29",
+                    "tertiary": "#251400",
+                    "primary-fixed-dim": "#b5c6f1",
+                    "on-primary-fixed-variant": "#35466a",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-fixed": "#2a1800",
+                    "outline": "#75777f",
+                    "on-tertiary-fixed-variant": "#5e4116",
+                    "on-primary-container": "#8394bc",
+                    "primary-fixed": "#d8e2ff",
+                    "secondary-fixed": "#dde2f5",
+                    "on-tertiary-container": "#b38d5b",
+                    "secondary": "#585e6e",
+                    "secondary-fixed-dim": "#c0c6d9",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "background": "#f8f9fa",
+                    "on-primary-fixed": "#061b3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "display": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center px-6 h-20 bg-[#f8f9fa]/80 backdrop-blur-md no-border bg-surface-container-low">
+<div class="flex items-center w-full justify-between">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#f3f4f5] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#1A2C4E]" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-headline font-bold tracking-tight text-2xl text-[#1A2C4E]">Jane Doe</h1>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shadow-[0_0_8px_rgba(234,191,137,0.6)]"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70">Active Session</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#f3f4f5] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#1A2C4E]" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-44 px-4 max-w-2xl mx-auto space-y-6">
+<!-- Primary Action Cluster -->
+<section class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center py-4 rounded-2xl border-2 border-outline-variant/30 text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined mb-1" data-icon="close">close</span>
+<span class="text-[11px] font-bold font-label uppercase tracking-wider">End Session</span>
+</button>
+<button class="flex flex-col items-center justify-center py-4 rounded-2xl bg-error-container/40 text-error hover:bg-error-container/60 transition-all active:scale-95">
+<span class="material-symbols-outlined mb-1" data-icon="block">block</span>
+<span class="text-[11px] font-bold font-label uppercase tracking-wider">Decline</span>
+</button>
+<button class="flex flex-col items-center justify-center py-4 rounded-2xl bg-primary text-on-primary shadow-lg shadow-primary/20 hover:bg-primary-container transition-all active:scale-95">
+<span class="material-symbols-outlined mb-1" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-[11px] font-bold font-label uppercase tracking-wider">Accept</span>
+</button>
+</section>
+<!-- Cart Summary Card -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 shadow-[0_12px_40px_rgba(25,28,29,0.04)]">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+<h2 class="font-headline font-bold text-lg text-primary">Current Cart</h2>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">2 Items</span>
+</div>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern sleek wireless over-ear headphones in matte black finish on a clean white background studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJkoy1Y5g44-NC6kJXiPBufgmp1TB2F8heoou-BnojDgPo0F-mVhJP0tXpbDOGl5j1ueZt0P3BGmDyDxtvbcawFXnEOLBPGmjlcfjUns61J8gmxJkQegSS5xcHMAPLRNpD29KwrHE04RqEyilpSHg-QpHwm5qRv8uMJwD_rYX48vejVrjE6-4bBcSWktTfLlDTaVBwbCseZk4SVraIAzo6IoQ7Q7Xd-rFTPzrVJjNhbGXK36Jp1xrHRzNl4grTQl45pozdhBP593I"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-semibold text-primary">Wireless Headphones</h3>
+<p class="text-xs text-on-surface-variant">$249.00</p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low rounded-full px-2 py-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
+</button>
+<span class="font-bold text-sm">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist grey felt laptop sleeve with leather accents and clean stitching on neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwjtISSTAuoas18vnwM2QQKsS9W7N0jYL-aQDOf7UKEnGYz2bEmXyeblk2N9AgzOLgZXPAPqH_6E43A1AJznQBvPP1pwb1r1ffHw3sQ9Xo1hIpwvVrIURm5N7NufWcqFUiORWQ4-n9pVkN8mKfsJl9SAd9_bLFPcaEL0Aqr-8jkyS0YUTpyZ8trnHy04ru-jzmbUwTBoxMNR-nBm-HXhvMvDlM1M4O79oylengaejp51PCO79eAc9s2V-FmCJOkimZny4qogBAcn0"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-semibold text-primary">Laptop Sleeve</h3>
+<p class="text-xs text-on-surface-variant">$45.00</p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low rounded-full px-2 py-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
+</button>
+<span class="font-bold text-sm">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-variant flex items-center justify-between">
+<span class="font-label text-sm text-on-surface-variant font-medium">Subtotal</span>
+<span class="font-headline font-extrabold text-xl text-primary">$294.00</span>
+</div>
+</section>
+<!-- Chat Timeline Interface -->
+<section class="space-y-6">
+<div class="flex justify-center">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/50 py-1 px-3 bg-surface-container rounded-full">Today, 10:24 AM</span>
+</div>
+<!-- Customer Message -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-2xl rounded-tl-none px-4 py-3 shadow-sm">
+<p class="text-sm leading-relaxed">Hi! I'm looking for headphones that are good for long flights. Are these noise cancelling?</p>
+</div>
+<span class="text-[10px] text-on-surface-variant ml-1">10:25 AM</span>
+</div>
+<!-- Agent Response -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+<div class="bg-primary text-on-primary rounded-2xl rounded-tr-none px-4 py-3 shadow-md">
+<p class="text-sm leading-relaxed">Absolutely, Jane! These features active noise cancellation (ANC) that blocks out engine noise perfectly.</p>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="text-[10px] text-on-surface-variant">10:26 AM</span>
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim" data-icon="done_all">done_all</span>
+</div>
+</div>
+<!-- Customer Message -->
+<div class="flex flex-col items-start gap-1 max-w-[85%]">
+<div class="bg-surface-container-high text-on-surface rounded-2xl rounded-tl-none px-4 py-3 shadow-sm">
+<p class="text-sm leading-relaxed">That sounds great. Does the laptop sleeve fit a 16" MacBook Pro?</p>
+</div>
+<span class="text-[10px] text-on-surface-variant ml-1">10:28 AM</span>
+</div>
+</section>
+</main>
+<!-- Sticky Reply Composer -->
+<div class="fixed bottom-[96px] left-0 w-full px-4 z-40">
+<div class="max-w-2xl mx-auto bg-[#ffffff]/90 backdrop-blur-xl rounded-2xl p-2 flex items-center gap-2 shadow-[0_-12px_40px_rgba(25,28,29,0.06)]">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+<input class="flex-grow bg-transparent border-none focus:ring-0 text-sm py-2 px-1 placeholder:text-on-surface-variant/40" placeholder="Type your reply..." type="text"/>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-on-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f8f9fa]/90 backdrop-blur-xl no-border shadow-[0_-8px_30px_rgba(0,0,0,0.04)] rounded-t-[1.5rem]">
+<a class="flex flex-col items-center justify-center bg-[#e1e3e4] text-[#1A2C4E] rounded-xl px-5 py-2 active:scale-90 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="forum" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="font-body text-[11px] font-medium tracking-wide">Sessions</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44474e] px-5 py-2 hover:text-[#1A2C4E] active:scale-90 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="font-body text-[11px] font-medium tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44474e] px-5 py-2 hover:text-[#1A2C4E] active:scale-90 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="inventory_2">inventory_2</span>
+<span class="font-body text-[11px] font-medium tracking-wide">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#44474e] px-5 py-2 hover:text-[#1A2C4E] active:scale-90 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-body text-[11px] font-medium tracking-wide">Settings</span>
+</a>
+</nav>
+</body></html>
