@@ -1,0 +1,147 @@
+# CartConnect design.md
+
+## Product
+
+CartConnect is a live shopping support experience that lets store agents help customers in real time through session-based chat and cart collaboration.
+
+## Primary surfaces
+
+1. Agent mobile app
+2. Agent web dashboard
+3. Customer session web experience
+
+## Current priority
+
+Design and iterate the **agent mobile experience** first.
+
+## Design goals
+
+- modern and premium
+- high trust and calm
+- fast to scan under live support pressure
+- mobile-first
+- crisp hierarchy with minimal clutter
+- visually closer to polished Shopify-adjacent tooling than generic admin UI
+
+## Brand / tone
+
+- confidence without looking corporate-heavy
+- neutral surfaces with a few strong accents
+- clean cards, generous spacing, rounded corners
+- strong status visibility for live session state
+
+## Target user
+
+Store support agents handling live pre-purchase or in-cart conversations with customers.
+
+## Jobs to support
+
+- sign in quickly
+- see waiting and active sessions immediately
+- understand session urgency at a glance
+- accept a session fast
+- read customer context fast
+- reply clearly
+- adjust cart with minimal friction
+- move toward checkout confidently
+
+## Core screens
+
+### 1. Login
+- email
+- password
+- strong brand/title presence
+- subtle API/environment footer only in debug/dev mode
+
+### 2. Agent dashboard
+- current agent identity summary
+- compact KPI / status summary
+- clear grouped session list
+- strong highlight for waiting sessions
+- preserve selected session while list refreshes
+
+### 3. Session detail
+- customer identity and session state
+- primary actions: accept, decline, end
+- chat timeline
+- cart contents
+- clear subtotal / checkout state
+- controls for quantity changes and remove
+
+### 4. Chat composer state
+- reply field anchored predictably
+- send action obvious
+- distinguish customer vs agent messages visually
+
+### 5. Cart edit state
+- quantity controls
+- remove action
+- room for future discount and checkout actions
+
+## Important states
+
+- signed out
+- loading
+- empty session list
+- waiting session selected
+- active session selected
+- expired/ended session
+- auth expired and sign-in required again
+- API error / retry state
+
+## Interaction notes
+
+- session refresh should feel live
+- avoid jarring full-screen spinners when partial loading is enough
+- destructive actions should feel intentional
+- waiting session should stand out clearly from expired/completed items
+
+## Must-keep constraints
+
+- must stay practical to implement in Flutter
+- should map cleanly to current backend session/chat/cart APIs
+- should not assume unavailable backend features
+
+## Stitch generation guidance
+
+When generating screens from this file:
+- prefer production-looking layouts over wireframe-style output
+- bias toward a single polished visual system across all screens
+- keep components reusable across screens
+- generate mobile-sized screens first
+- produce prompts that mention live shopping support, real-time session handling, agent workflow, customer chat, and collaborative cart editing
+
+---
+
+# CartConnect brand notes
+
+## Visual direction
+
+- premium but restrained
+- calm operational tooling
+- not playful consumer UI
+- not dense enterprise UI
+
+## Suggested design tokens
+
+- background: soft neutral / off-white
+- surface: white or lightly tinted cards
+- primary accent: deep blue
+- success: soft green
+- warning: amber
+- danger: muted red
+
+## UI characteristics
+
+- rounded cards
+- large touch targets
+- readable typography hierarchy
+- quiet shadows
+- clear state chips / pills for session status
+
+## Session semantics
+
+- waiting: most prominent
+- active: confident / engaged
+- expired: subdued
+- completed: low emphasis
