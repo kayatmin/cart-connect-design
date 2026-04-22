@@ -1,0 +1,10 @@
+# Example Codex/OpenClaw-style MCP config snippet
+# Adjust to your actual client config shape if needed.
+
+[mcp_servers.stitch]
+command = "npx"
+args = ["@_davideast/stitch-mcp", "proxy"]
+
+[mcp_servers.stitch.env]
+# Prefer runtime export or a wrapper that injects the real key.
+STITCH_API_KEY = "${STITCH_API_KEY}"

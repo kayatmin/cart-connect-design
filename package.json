@@ -1,0 +1,19 @@
+{
+  "name": "cart-connect-design",
+  "private": true,
+  "version": "0.1.0",
+  "description": "CartConnect Stitch automation and design.md workflow",
+  "type": "module",
+  "scripts": {
+    "prompt:build": "node scripts/build-design-prompts.mjs",
+    "stitch:doctor": "bash scripts/stitch-doctor.sh",
+    "stitch:proxy": "bash scripts/stitch-proxy.sh",
+    "stitch:tools": "bash scripts/stitch-tools.sh",
+    "stitch:view:projects": "bash scripts/stitch-view-projects.sh",
+    "stitch:export": "node scripts/export-stitch-project.mjs",
+    "stitch:generate:screen": "node scripts/generate-stitch-screen.mjs"
+  },
+  "devDependencies": {
+    "@_davideast/stitch-mcp": "latest"
+  }
+}
