@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CartConnect Agent Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#061b3c",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#4d5e83",
+                        "surface-dim": "#d9dadb",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed": "#dde2f5",
+                        "primary-container": "#1a2c4e",
+                        "on-primary-container": "#8394bc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#44474e",
+                        "secondary-container": "#dadff2",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#b38d5b",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "outline-variant": "#c5c6cf",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#2a1800",
+                        "on-surface": "#191c1d",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c0c6d9",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-container": "#5c6273",
+                        "inverse-primary": "#b5c6f1",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed": "#151b29",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#ffddb5",
+                        "secondary": "#585e6e",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "outline": "#75777f",
+                        "tertiary": "#251400",
+                        "on-tertiary-fixed-variant": "#5e4116",
+                        "tertiary-container": "#402700",
+                        "on-secondary-fixed-variant": "#414756",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed-variant": "#35466a",
+                        "surface-bright": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed-dim": "#eabf89",
+                        "primary": "#021738",
+                        "on-background": "#191c1d",
+                        "primary-fixed-dim": "#b5c6f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Agent Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close-up professional portrait of a confident male customer service agent in a bright modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fZ2_rECorfDUDy5_FaRyjfFHXBR4I_t8OMn0kVeFf4AkPnjIJ9yFLHuo0UZAUcECc-TI3iPdVkK5m-yRJRDlUFyBkPnESZnrjJmOqMIp7ZGkRI-EEAVQIheELSuf-Q-ZC1FUfrjFRe7T-AAXt26LsBTWQ9p7RjmYoOChWFZXMnaxTpOpKEAhhXmXu1GoACVmpWKvwt-Yw0uN4y1WRUp496egyTxv7Q5BOek4E4z8fRui4GV9EEIzKsZ_t_i_azU6v0Nod_X18Ss"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-slate-900 tracking-tight text-sm">CartConnect</span>
+<span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Online
+                    </span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:opacity-70 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Dashboard Welcome -->
+<section class="mb-8">
+<h1 class="text-3xl font-headline font-extrabold text-primary tracking-tight mb-2">Hello, Alex</h1>
+<p class="text-on-secondary-container font-medium">Ready for your shift? You have new requests.</p>
+</section>
+<!-- Metrics Section: Bento Grid -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<!-- Waiting Card (Emphasized) -->
+<div class="bg-primary-container text-white p-5 rounded-xl shadow-[0_12px_40px_rgba(2,23,56,0.15)] flex flex-col justify-between aspect-square">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">hourglass_empty</span>
+<span class="bg-error px-2 py-0.5 rounded-full text-[10px] font-bold tracking-tighter">URGENT</span>
+</div>
+<div>
+<span class="text-4xl font-headline font-extrabold block">5</span>
+<span class="text-sm font-semibold text-on-primary-container">Waiting</span>
+</div>
+</div>
+<!-- Active Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.02)] flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">forum</span>
+<div>
+<span class="text-4xl font-headline font-extrabold text-primary block">3</span>
+<span class="text-sm font-semibold text-secondary">Active</span>
+</div>
+</div>
+</section>
+<!-- Session List Section -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-headline font-bold text-primary tracking-tight">Queue</h2>
+<span class="text-xs font-bold text-on-secondary-fixed-variant uppercase tracking-widest">Live Updates</span>
+</div>
+<div class="space-y-4">
+<!-- Incoming Session (Highlighted) -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_12px_40px_rgba(25,28,29,0.06)] ring-2 ring-primary/5 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary-container font-headline font-bold text-lg">
+                                JD
+                            </div>
+<div>
+<h3 class="font-bold text-primary">Jane Doe</h3>
+<p class="text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                                    Wait: 04:20m
+                                </p>
+</div>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-xl font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/20">
+                            Join
+                        </button>
+</div>
+</div>
+<!-- Active Session -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center justify-between group transition-all">
+<div class="flex items-center gap-4 opacity-80">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary font-headline font-bold text-lg">
+                            MK
+                        </div>
+<div>
+<h3 class="font-bold text-primary">Mark K.</h3>
+<p class="text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">circle</span>
+                                Ongoing Session
+                            </p>
+</div>
+</div>
+<button class="text-primary hover:bg-white p-2 rounded-lg transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Another Waiting Session -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.02)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary-container font-headline font-bold text-lg">
+                                SL
+                            </div>
+<div>
+<h3 class="font-bold text-primary">Sarah L.</h3>
+<p class="text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                                    Wait: 02:15m
+                                </p>
+</div>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-xl font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-primary/20">
+                            Join
+                        </button>
+</div>
+</div>
+<!-- Another Active Session -->
+<div class="bg-surface-container-low p-5 rounded-xl flex items-center justify-between opacity-80">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary font-headline font-bold text-lg">
+                            TH
+                        </div>
+<div>
+<h3 class="font-bold text-primary">Tom H.</h3>
+<p class="text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">circle</span>
+                                Ongoing Session
+                            </p>
+</div>
+</div>
+<button class="text-primary hover:bg-white p-2 rounded-lg transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[2rem] bg-white/90 backdrop-blur-lg border-t border-slate-200/20 shadow-[0_-8px_30px_rgba(0,0,0,0.04)]">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center bg-primary text-white rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wide uppercase mt-1">Overview</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-[#1A2C4E] active:scale-90 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wide uppercase mt-1">Sessions</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-[#1A2C4E] active:scale-90 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wide uppercase mt-1">Metrics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-5 py-2 hover:text-[#1A2C4E] active:scale-90 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wide uppercase mt-1">Account</span>
+</a>
+</div>
+</nav>
+</body></html>
