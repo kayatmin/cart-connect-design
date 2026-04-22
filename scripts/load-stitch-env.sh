@@ -1,9 +1,27 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+finish_success() {
+  if [[ "${BASH_SOURCE[0]}" != "$0" ]]; then
+    return 0
+  else
+    exit 0
+  fi
+}
+
+finish_failure() {
+  local code="${1:-1}"
+  if [[ "${BASH_SOURCE[0]}" != "$0" ]]; then
+    return "$code"
+  else
+    exit "$code"
+  fi
+}
+
 if [[ -n "${STITCH_API_KEY:-}" ]]; then
   export STITCH_API_KEY
-  exit 0
+  finish_success || true
+  return 0 2>/dev/null || exit 0
 fi
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
@@ -11,10 +29,19 @@ REPO_ROOT="$(cd -- "$SCRIPT_DIR/.." && pwd)"
 
 candidates=(
   "$REPO_ROOT/knowledge-base/secrets/api-keys"
+  "$REPO_ROOT/knowledge-base/secrets/api-keys.md"
   "/knowledge-base/secrets/api-keys"
+  "/knowledge-base/secrets/api-keys.md"
   "/home/rog/knowledge-base/secrets/api-keys"
+  "/home/rog/knowledge-base/secrets/api-keys.md"
+  "/mnt/d/knowledge-base/secrets/api-keys"
+  "/mnt/d/knowledge-base/secrets/api-keys.md"
+  "/mnt/d/knowledge-base/kai/secrets/api-keys"
+  "/mnt/d/knowledge-base/kai/secrets/api-keys.md"
   "$REPO_ROOT/../knowledge-base/secrets/api-keys"
+  "$REPO_ROOT/../knowledge-base/secrets/api-keys.md"
   "$REPO_ROOT/../../knowledge-base/secrets/api-keys"
+  "$REPO_ROOT/../../knowledge-base/secrets/api-keys.md"
 )
 
 for candidate in "${candidates[@]}"; do
@@ -36,10 +63,12 @@ PY
     if [[ -n "$value" ]]; then
       export STITCH_API_KEY="$value"
       export STITCH_API_KEY_SOURCE="$candidate"
-      exit 0
+      finish_success || true
+      return 0 2>/dev/null || exit 0
     fi
   fi
 done
 
 echo "STITCH_API_KEY not found. Checked env and knowledge-base secret paths." >&2
-exit 1
+finish_failure 1 || true
+return 1 2>/dev/null || exit 1
