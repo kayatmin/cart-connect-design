@@ -18,5 +18,10 @@
     "id": "39808ef410d144ad85ac3a72ff733a56",
     "title": "Inventory Search & Add",
     "dir": "exports/projects/3299141328605568565/screens/39808ef410d144ad85ac3a72ff733a56"
+  },
+  {
+    "id": "4f7b9c67f82f43a0a3cac3f22578f49a",
+    "title": "End Session Confirmation",
+    "dir": "exports/projects/3299141328605568565/screens/4f7b9c67f82f43a0a3cac3f22578f49a"
   }
 ]

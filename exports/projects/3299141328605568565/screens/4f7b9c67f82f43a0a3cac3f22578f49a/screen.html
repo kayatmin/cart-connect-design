@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#5e4116",
+                        "secondary-container": "#dadff2",
+                        "tertiary": "#251400",
+                        "primary-fixed-dim": "#b5c6f1",
+                        "tertiary-fixed": "#ffddb5",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#b38d5b",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#414756",
+                        "background": "#f8f9fa",
+                        "outline-variant": "#c5c6cf",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-container": "#402700",
+                        "primary": "#021738",
+                        "secondary-fixed": "#dde2f5",
+                        "on-primary-fixed": "#061b3c",
+                        "on-primary-container": "#8394bc",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed": "#2a1800",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#44474e",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-variant": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#585e6e",
+                        "on-surface": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#b5c6f1",
+                        "on-background": "#191c1d",
+                        "surface-tint": "#4d5e83",
+                        "primary-container": "#1a2c4e",
+                        "tertiary-fixed-dim": "#eabf89",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#151b29",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#35466a",
+                        "on-secondary-container": "#5c6273",
+                        "secondary-fixed-dim": "#c0c6d9",
+                        "surface": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary": "#ffffff",
+                        "outline": "#75777f",
+                        "surface-dim": "#d9dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- Background: Live Session Detail Screen (Blurred/Dimmed Context) -->
+<main class="relative h-screen w-full p-6 flex flex-col space-y-6">
+<!-- Top Bar Anchor -->
+<header class="flex justify-between items-center w-full px-6 py-4 bg-slate-50/80 backdrop-blur-md sticky top-0 docked full-width z-10 shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-900" data-icon="grid_view">grid_view</span>
+<h1 class="font-headline font-bold tracking-tight text-blue-900 text-lg">Operational Portal</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-slate-200">
+<img alt="Agent Profile" data-alt="professional headshot of a female store agent with a friendly expression and neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnTONXsipvx4hePAY9bZfzy7q502NwAOGwESa5Ak3AOdMY6usEdb8vNNYLQYOgihDN5L41dx_wIz3pf5xU9_sBzbg8EtaVGn0mrMw3f0uAo_kMIoqkKZJdJz03dF5oL4HtdpX_l5xydGPHnkx2XUMQvFmArw6WNZWBtR2xDLgiIbI4Moru0ZtF6x_hu6X1tjmW0bQRWrM4KXu2kccKozotanHzQSUZwM3B3mc6XIM2ef46zYtiPFOCQhIrm2CPyt31oe9TDsBEe9A"/>
+</div>
+</header>
+<!-- Detailed Content Mockup (The Background UI) -->
+<div class="flex-1 space-y-8 opacity-40 grayscale-[0.5]">
+<section class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="chat_bubble">chat_bubble</span>
+</div>
+<div>
+<h2 class="font-headline font-bold text-2xl text-primary">Live Session</h2>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest">Active ID: CS-4921</p>
+</div>
+</div>
+</section>
+<div class="bg-surface-container-low p-6 rounded-xl space-y-6">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></div>
+<span class="font-medium text-primary">Customer Connected</span>
+</div>
+<span class="text-sm font-label text-on-surface-variant">08:42 min</span>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border-l-4 border-primary">
+<p class="text-sm text-on-surface">"I'm looking for headphones that work well with both my laptop and phone simultaneously."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- FAB Suppression Context -->
+<!-- Note: FAB is suppressed as per guidelines for task-focused screens -->
+</main>
+<!-- Overlay Backdrop -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-[60] flex items-center justify-center p-6">
+<!-- Confirmation Modal -->
+<div class="bg-surface-container-lowest w-full max-w-sm rounded-xl shadow-[0_-12px_40px_rgba(25,28,29,0.06)] overflow-hidden flex flex-col items-center text-center p-8 relative">
+<!-- Warning Icon -->
+<div class="mb-6">
+<div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="report_problem">report_problem</span>
+</div>
+</div>
+<!-- Headline -->
+<h2 class="font-headline font-extrabold text-2xl text-primary mb-6 tracking-tight">End Live Session?</h2>
+<!-- Context Block -->
+<div class="w-full bg-surface-container-low p-4 rounded-xl mb-6 flex flex-col items-center">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
+<img alt="Jane Doe" data-alt="vibrant portrait of a woman with dark hair smiling gently against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9k--Kd6ZCD-cEly6P_GSl2msZGIOWRGeSjwT8WgZ8pOswvZh7k9M-xi3qdJCrUQ0c8ZoaZYpJ8nJllhaMi2THuGofOrVPPHpyDAeBJ4s1_zyNZEaURLIpnUvO2raXjCtpOSdFHQBhxyvp9Ic_IUmXhHWy5WqIKF7FGWXZXIeTYiKxGMqnOizm8qEM3BqOA2-GNlQWbERPflSB4cTcD-bpZ2trEMfDef2gzQZQSeTn0PTkdnerU8LdHOitQBopSBG497jxW7IC-8A"/>
+</div>
+<span class="font-headline font-bold text-primary">Jane Doe</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-highest rounded-full">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant" data-icon="headphones">headphones</span>
+<p class="text-[12px] font-label font-medium text-on-surface-variant uppercase tracking-wider">Session focus: Wireless Headphones</p>
+</div>
+</div>
+<!-- Warning Copy -->
+<p class="font-body text-on-surface-variant text-[15px] leading-relaxed mb-8 px-2">
+                Ending this session will stop live support for the customer. This action <span class="font-bold text-on-surface">cannot be undone</span>.
+            </p>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-3">
+<button class="w-full py-4 bg-error text-on-error font-headline font-bold rounded-xl active:scale-95 transition-transform shadow-md">
+                    End Session
+                </button>
+<button class="w-full py-4 bg-transparent text-primary-container font-headline font-bold rounded-xl active:scale-95 transition-transform border-2 border-primary-container/10 hover:bg-surface-container-low">
+                    Stay in Session
+                </button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation (Filtered: Only for top-level destinations, suppressed for this transactional focus) -->
+<!-- However, based on Shell Visibility & Relevance, we hide it for task-focused Confirmation screens -->
+</body></html>
