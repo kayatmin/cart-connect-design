@@ -1,3 +1,6 @@
+Design the CartConnect mobile "Auth Expired" re-auth screen.
+
+Use this source of truth:
 # CartConnect design.md
 
 ## Product
@@ -131,3 +134,47 @@ When generating screens from this file:
 - keep components reusable across screens
 - generate mobile-sized screens first
 - produce prompts that mention live shopping support, real-time session handling, agent workflow, customer chat, and collaborative cart editing
+
+Brand notes:
+# CartConnect brand notes
+
+## Visual direction
+
+- premium but restrained
+- calm operational tooling
+- not playful consumer UI
+- not dense enterprise UI
+
+## Suggested design tokens
+
+- background: soft neutral / off-white
+- surface: white or lightly tinted cards
+- primary accent: deep blue
+- success: soft green
+- warning: amber
+- danger: muted red
+
+## UI characteristics
+
+- rounded cards
+- large touch targets
+- readable typography hierarchy
+- quiet shadows
+- clear state chips / pills for session status
+
+## Session semantics
+
+- waiting: most prominent
+- active: confident / engaged
+- expired: subdued
+- completed: low emphasis
+
+Requirements:
+- shown when backend returns 401 during an active agent session
+- explains session expired calmly — not alarming, just informational
+- single clear "Sign in again" CTA, no distractions
+- maintains brand consistency with the Login screen (same color family, typography, spacing)
+- minimal, single-focus layout — agent has to re-auth, no other decisions
+- mobile-first, large touch target on the CTA
+- premium operational UI feel — not a generic error page
+- quiet background, confident copy

@@ -59,8 +59,8 @@ Store support agents handling live pre-purchase or in-cart conversations with cu
 ### 2. Agent dashboard
 - current agent identity summary
 - compact KPI / status summary
-- clear grouped session list
-- strong highlight for waiting sessions
+- clear grouped session list — sessions grouped by status category: **Waiting** (most prominent, amber highlight), **Active** (blue highlight), then **Completed / Expired / Declined** (subdued, gray)
+- strong visual emphasis on waiting sessions
 - preserve selected session while list refreshes
 
 ### 3. Session detail
@@ -80,6 +80,27 @@ Store support agents handling live pre-purchase or in-cart conversations with cu
 - quantity controls
 - remove action
 - room for future discount and checkout actions
+
+### 6. Auth Expired
+- shown when backend returns 401 during an active session
+- explains the session expired calmly (not alarming)
+- single clear "Sign in again" CTA
+- maintains brand consistency with Login screen
+- minimal, single-focus layout
+
+### 7. Session Queue Empty State
+- shown when agent dashboard loads with zero sessions in queue
+- reassures the agent — this is a good state, not an error
+- includes subtle illustration/icon (subtle, not playful)
+- soft green or neutral tint to communicate "all clear"
+- no action required, just reassurance
+
+### 8. API / Network Error State
+- shown when API call fails (connection error, server error, timeout)
+- brief explanation of what went wrong (connection vs server)
+- prominent "Retry" button
+- "Contact support" fallback for persistent failures
+- muted warning tones, recoverable and calm
 
 ## Important states
 

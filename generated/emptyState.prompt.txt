@@ -1,3 +1,6 @@
+Design the CartConnect mobile "No Sessions" empty state screen.
+
+Use this source of truth:
 # CartConnect design.md
 
 ## Product
@@ -131,3 +134,48 @@ When generating screens from this file:
 - keep components reusable across screens
 - generate mobile-sized screens first
 - produce prompts that mention live shopping support, real-time session handling, agent workflow, customer chat, and collaborative cart editing
+
+Brand notes:
+# CartConnect brand notes
+
+## Visual direction
+
+- premium but restrained
+- calm operational tooling
+- not playful consumer UI
+- not dense enterprise UI
+
+## Suggested design tokens
+
+- background: soft neutral / off-white
+- surface: white or lightly tinted cards
+- primary accent: deep blue
+- success: soft green
+- warning: amber
+- danger: muted red
+
+## UI characteristics
+
+- rounded cards
+- large touch targets
+- readable typography hierarchy
+- quiet shadows
+- clear state chips / pills for session status
+
+## Session semantics
+
+- waiting: most prominent
+- active: confident / engaged
+- expired: subdued
+- completed: low emphasis
+
+Requirements:
+- shown when agent dashboard loads with zero sessions in queue
+- reassures the agent — this is a good state, not an error or problem
+- subtle illustration or icon (professional, not playful or cartoonish)
+- brief reassuring copy — "All clear", "No waiting sessions", or similar
+- soft green or neutral tint to communicate "all clear / nothing to do"
+- no action required from agent — just informational
+- matches premium operational UI aesthetic of the rest of the app
+- generous whitespace, clean card layout
+- mobile-first

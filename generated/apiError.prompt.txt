@@ -1,3 +1,6 @@
+Design the CartConnect mobile API / Network Error screen.
+
+Use this source of truth:
 # CartConnect design.md
 
 ## Product
@@ -131,3 +134,49 @@ When generating screens from this file:
 - keep components reusable across screens
 - generate mobile-sized screens first
 - produce prompts that mention live shopping support, real-time session handling, agent workflow, customer chat, and collaborative cart editing
+
+Brand notes:
+# CartConnect brand notes
+
+## Visual direction
+
+- premium but restrained
+- calm operational tooling
+- not playful consumer UI
+- not dense enterprise UI
+
+## Suggested design tokens
+
+- background: soft neutral / off-white
+- surface: white or lightly tinted cards
+- primary accent: deep blue
+- success: soft green
+- warning: amber
+- danger: muted red
+
+## UI characteristics
+
+- rounded cards
+- large touch targets
+- readable typography hierarchy
+- quiet shadows
+- clear state chips / pills for session status
+
+## Session semantics
+
+- waiting: most prominent
+- active: confident / engaged
+- expired: subdued
+- completed: low emphasis
+
+Requirements:
+- shown when an API call fails (connection error, server error, or timeout)
+- briefly explains what happened — "Couldn't reach the server", "Connection lost"
+- prominent "Retry" button — recoverable error, not a dead end
+- "Contact support" fallback link for persistent failures
+- muted amber/warning tones for the error indicator (not alarming red)
+- clean card layout, single action focus
+- mobile-first, large touch targets
+- recoverable feel — the agent should feel confident pressing Retry
+- avoid technical jargon in user-facing text
+- premium operational UI — not a generic white error screen
