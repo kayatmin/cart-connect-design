@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CartConnect Agent Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500&amp;family=Source+Sans+3:wght@400;600&amp;family=IBM+Plex+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#0c1c2f",
+                        "outline-variant": "#c4c6cd",
+                        "surface-container-low": "#f5f3f5",
+                        "active-blue": "#2563EB",
+                        "inverse-surface": "#303032",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-bright": "#fbf9fa",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#316bf3",
+                        "clear-green": "#167A55",
+                        "primary-fixed": "#d4e4fe",
+                        "on-error": "#ffffff",
+                        "background-base": "#F6F7F9",
+                        "surface-main": "#FFFFFF",
+                        "text-tertiary": "#8A94A6",
+                        "surface": "#fbf9fa",
+                        "inverse-on-surface": "#f2f0f2",
+                        "surface-container-highest": "#e4e2e4",
+                        "primary-fixed-dim": "#b8c8e1",
+                        "on-tertiary-container": "#a0815f",
+                        "inverse-primary": "#b8c8e1",
+                        "surface-tint": "#505f75",
+                        "tertiary-fixed-dim": "#e4c09a",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1b1b1d",
+                        "primary": "#000714",
+                        "tertiary": "#0d0500",
+                        "ink-dark": "#07111F",
+                        "on-error-container": "#93000a",
+                        "text-secondary": "#586174",
+                        "tertiary-container": "#2e1b03",
+                        "text-primary": "#111827",
+                        "on-surface-variant": "#44474c",
+                        "background": "#fbf9fa",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "ink-primary": "#102033",
+                        "surface-dim": "#dbd9db",
+                        "border-soft": "#DCE2EA",
+                        "on-secondary-fixed": "#00174b",
+                        "on-primary-container": "#78889f",
+                        "secondary": "#0051d5",
+                        "surface-container-lowest": "#ffffff",
+                        "waiting-amber": "#F2A900",
+                        "on-primary-fixed-variant": "#39485d",
+                        "surface-container": "#efedef",
+                        "on-secondary-container": "#fefcff",
+                        "surface-variant": "#e4e2e4",
+                        "on-tertiary-fixed": "#2a1801",
+                        "outline": "#74777d",
+                        "primary-container": "#102033",
+                        "surface-container-high": "#eae7e9",
+                        "tertiary-fixed": "#ffddb9",
+                        "surface-raised": "#FBFCFE",
+                        "on-tertiary-fixed-variant": "#5a4225",
+                        "on-background": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "1.25rem",
+                        "edge-margin": "1rem",
+                        "inline-gap": "0.5rem",
+                        "stack-gap": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Plus Jakarta Sans"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "data-mono": ["Space Grotesk"],
+                        "body-sm": ["Inter"],
+                        "technical": ["IBM Plex Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-base min-h-screen flex flex-col font-body-md text-text-primary overflow-hidden">
+<!-- TopAppBar Component (Immutable Identity) -->
+<header class="bg-slate-50 dark:bg-slate-950 flex items-center justify-between px-4 h-16 w-full border-b border-slate-200 dark:border-slate-800 fixed top-0 z-50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-50" data-icon="shield_person">shield_person</span>
+<span class="text-xl font-bold tracking-tighter text-slate-900 dark:text-slate-50 font-['Plus_Jakarta_Sans']">CartConnect</span>
+</div>
+<div class="flex items-center">
+<div class="w-2 h-2 rounded-full bg-clear-green mr-2"></div>
+<span class="font-technical text-[10px] text-slate-500 uppercase tracking-widest">System Ready</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-edge-margin pt-16 pb-12">
+<!-- Brand Identity Section -->
+<div class="mb-10 text-center">
+<div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-ink-primary text-on-primary mb-4 shadow-sm">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_cart">shopping_cart</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-ink-primary tracking-tight">Agent Console</h1>
+<p class="font-body-sm text-text-secondary mt-1">Authorized access only for retail partners</p>
+</div>
+<!-- Login Form Card -->
+<div class="w-full max-w-sm bg-surface-main p-6 rounded-xl border border-border-soft shadow-sm">
+<form class="space-y-5">
+<div class="space-y-2">
+<label class="font-['Source_Sans_3'] text-xs font-semibold uppercase tracking-wider text-text-tertiary" for="email">Email Address</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg bg-surface-raised border border-border-soft focus:border-active-blue focus:ring-1 focus:ring-active-blue transition-all outline-none font-body-md text-text-primary placeholder:text-text-tertiary" id="email" name="email" placeholder="agent@cartconnect.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="font-['Source_Sans_3'] text-xs font-semibold uppercase tracking-wider text-text-tertiary" for="password">Password</label>
+<a class="font-body-sm text-active-blue hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-lg bg-surface-raised border border-border-soft focus:border-active-blue focus:ring-1 focus:ring-active-blue transition-all outline-none font-body-md text-text-primary placeholder:text-text-tertiary" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full h-[52px] bg-ink-primary text-on-primary font-['Source_Sans_3'] font-semibold rounded-lg hover:bg-on-primary-fixed-variant active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+<span>Sign In</span>
+<span class="material-symbols-outlined text-xl" data-icon="login">login</span>
+</button>
+</div>
+<div class="relative py-2">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-border-soft"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="bg-surface-main px-2 text-xs font-technical text-text-tertiary uppercase">SSO Authentication</span>
+</div>
+</div>
+<button class="w-full h-12 border border-border-soft bg-surface-main text-ink-primary font-['Source_Sans_3'] font-semibold rounded-lg hover:bg-slate-50 transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="key">key</span>
+<span>Corporate SSO</span>
+</button>
+</form>
+</div>
+<!-- Visual Anchor (Asymmetric/Premium Detail) -->
+<div class="mt-8 grid grid-cols-2 gap-4 w-full max-w-sm">
+<div class="h-24 rounded-xl border border-border-soft bg-surface-main flex flex-col items-center justify-center p-3">
+<span class="material-symbols-outlined text-active-blue mb-1" data-icon="bolt">bolt</span>
+<span class="font-technical text-[10px] text-text-tertiary uppercase text-center">Low Latency<br/>Protocol</span>
+</div>
+<div class="h-24 rounded-xl border border-border-soft bg-surface-main flex flex-col items-center justify-center p-3">
+<span class="material-symbols-outlined text-clear-green mb-1" data-icon="verified_user">verified_user</span>
+<span class="font-technical text-[10px] text-text-tertiary uppercase text-center">End-to-End<br/>Secure</span>
+</div>
+</div>
+</main>
+<!-- Footer Component (Structural Logic Execution) -->
+<footer class="bg-transparent fixed bottom-0 w-full flex flex-col items-center gap-1 pb-6 opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-4">
+<span class="font-technical text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-600">Environment: Production</span>
+<div class="w-1 h-1 rounded-full bg-slate-300"></div>
+<span class="font-technical text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-600">API Status: Optimal</span>
+</div>
+<p class="font-technical text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-600">CartConnect v2.4.0-stable</p>
+</footer>
+<!-- Background Image Asset (Hidden context for rendering) -->
+<div class="fixed inset-0 -z-10 opacity-5 pointer-events-none overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="A macro close-up of a high-tech control panel with subtle glowing blue indicators and precise mechanical buttons in an industrial setting. The lighting is cold and professional, utilizing a palette of deep navy, slate gray, and crisp white to match a premium enterprise software aesthetic. The atmosphere is quiet, focused, and suggests high-stakes operational reliability. Each detail of the texture is rendered with razor-sharp clarity and a matte finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9TZ7_-Zta7TvSWe0yeqFWFLcf4BxbYP0bWNE3hp_JoNROdbhH8K6pQrGGrZeCH5JeeZB8p0MIZAt5lvl1arbYV1bglPCFXIViATQAaoS69oGkckX1CDPF5B_pEpxISG9HC9rSoQ9wExA9fKMyrMfwLL6NByWkQpv97U1EvjA5W_TiRLHhkgF7FBxy-UYex4LdiEwDoFEG8UqZZEoY_ZddDMmd5VOFjWfWsY5cUWo07sEO82v4oKpc_PIJpSlCM5_v3knbAVnvsco"/>
+</div>
+</body></html>

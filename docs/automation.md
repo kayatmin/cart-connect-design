@@ -20,13 +20,15 @@ Expected line format:
 
 ## Tooling choice
 
-This repo uses the community Stitch MCP helper CLI:
-- package: `@_davideast/stitch-mcp`
+This repo uses Google's Stitch SDK:
+- package: `@google/stitch-sdk`
+- repository: `google-labs-code/stitch-sdk`
 
 That gives us:
 - project browsing
 - screen browsing
 - MCP proxy for agents
+- screen generation from prompts
 - project/screen exports
 
 ## Typical loop
@@ -37,17 +39,27 @@ That gives us:
 4. Export the latest project artifacts into `exports/`
 5. Feed those assets into implementation work
 
+Current commands:
+
+```bash
+npm run stitch:doctor
+npm run stitch:tools
+npm run stitch:view:projects
+PROJECT_ID=<project-id> SCREEN=<screen-name> npm run stitch:generate:screen
+PROJECT_ID=<project-id> npm run stitch:export
+```
+
 ## Current automation coverage
 
 - prompt generation from `design.md`
 - local key loading
-- Stitch doctor/proxy/tool listing helpers
-- project export helper scaffold
+- Stitch doctor/proxy/tool listing helpers through `@google/stitch-sdk`
+- project export into `exports/<project-id>/screens/<screen-id>/`
 - MCP config examples for agent clients
 
 ## Near-term next step
 
-Once the secrets path is confirmed on this machine, run:
+When setting up a new machine, run:
 
 ```bash
 npm install
@@ -55,4 +67,4 @@ npm run stitch:doctor
 npm run stitch:tools
 ```
 
-Then we can lock in the exact upstream tool names and complete the generation/export scripts against the real Stitch account.
+Then run `npm run stitch:view:projects` to locate the current project id before generating or exporting screens.

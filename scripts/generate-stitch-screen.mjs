@@ -1,11 +1,13 @@
-import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
+import { stitch } from '@google/stitch-sdk';
+
+import { loadStitchEnv } from './stitch-env.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
 const screen = process.env.SCREEN ?? 'dashboard';
-const projectId = process.env.PROJECT_ID ?? '3299141328605568565';
-const toolName = process.env.STITCH_GENERATE_TOOL ?? 'generate_screen_from_text';
+const projectId = process.env.PROJECT_ID ?? '6508137877650248936';
+const deviceType = (process.env.STITCH_DEVICE_TYPE ?? 'MOBILE').toUpperCase();
 
 if (!projectId) {
   console.error('PROJECT_ID is required, e.g. PROJECT_ID=<id> SCREEN=dashboard npm run stitch:generate:screen');
@@ -19,24 +21,34 @@ if (!fs.existsSync(promptPath)) {
 }
 
 const prompt = fs.readFileSync(promptPath, 'utf8').trim();
-const payloadObject = { projectId, deviceType: 'mobile', prompt };
+const payloadObject = { projectId, deviceType, prompt };
 const payload = JSON.stringify(payloadObject, null, 2);
 const payloadPath = path.join(repoRoot, 'generated', `${screen}.request.json`);
 fs.writeFileSync(payloadPath, payload + '\n');
 
-const inlinePayload = JSON.stringify(payloadObject);
-const command = `source scripts/load-stitch-env.sh && npx @_davideast/stitch-mcp tool ${toolName} -d '${inlinePayload}'`;
-const result = spawnSync('bash', ['-lc', command], {
-  cwd: repoRoot,
-  encoding: 'utf8'
-});
-
-fs.writeFileSync(path.join(repoRoot, 'generated', `${screen}.response.stdout.log`), result.stdout ?? '');
-fs.writeFileSync(path.join(repoRoot, 'generated', `${screen}.response.stderr.log`), result.stderr ?? '');
-
-if (result.status !== 0) {
-  console.error(result.stderr || `Stitch tool ${toolName} failed`);
-  process.exit(result.status ?? 1);
+try {
+  loadStitchEnv();
+  const project = stitch.project(projectId);
+  const generated = await project.generate(prompt, deviceType);
+  const htmlUrl = await generated.getHtml();
+  const imageUrl = await generated.getImage();
+  const response = {
+    screen: screen,
+    projectId,
+    screenId: generated.screenId,
+    htmlUrl,
+    imageUrl,
+    data: generated.data,
+  };
+  fs.writeFileSync(
+    path.join(repoRoot, 'generated', `${screen}.response.json`),
+    JSON.stringify(response, null, 2) + '\n',
+  );
+  console.log(JSON.stringify(response, null, 2));
+} catch (error) {
+  fs.writeFileSync(
+    path.join(repoRoot, 'generated', `${screen}.response.error.log`),
+    `${error?.stack ?? error}\n`,
+  );
+  throw error;
 }
-
-console.log(result.stdout);

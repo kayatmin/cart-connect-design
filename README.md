@@ -57,7 +57,7 @@ npm run stitch:tools
 npm run prompt:build
 ```
 
-### List Stitch tools available through the proxy
+### List Stitch tools available through the official SDK
 
 ```bash
 npm run stitch:tools
@@ -81,8 +81,17 @@ npm run stitch:view:projects
 PROJECT_ID=<project-id> npm run stitch:export
 ```
 
+### Generate or refresh one screen
+
+```bash
+PROJECT_ID=<project-id> SCREEN=dashboard npm run stitch:generate:screen
+```
+
+`SCREEN` maps to `generated/<screen>.prompt.txt`. Run `npm run prompt:build` first after changing `design.md`.
+
 ## Notes
 
 - This repo does **not** store the Stitch API key.
 - The scripts load `STITCH_API_KEY` at runtime from env or the knowledge-base secrets file.
+- Stitch automation uses Google's `@google/stitch-sdk` package.
 - `design.md` should be updated before asking agents to generate new screens.

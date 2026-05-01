@@ -14,6 +14,6 @@
     "stitch:generate:screen": "node scripts/generate-stitch-screen.mjs"
   },
   "devDependencies": {
-    "@_davideast/stitch-mcp": "latest"
+    "@google/stitch-sdk": "^0.1.1"
   }
 }

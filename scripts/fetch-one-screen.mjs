@@ -1,71 +1,57 @@
 #!/usr/bin/env node
-// Fetch and save a screen from Stitch directly
-// Usage: node scripts/fetch-one-screen.mjs <screenId> <screenName>
-import * as cp from 'node:child_process';
+// Fetch and save one screen from Stitch through the official SDK.
+// Usage: PROJECT_ID=<project-id> node scripts/fetch-one-screen.mjs <screenId> [screenName]
 import fs from 'node:fs';
-import path from 'path';
+import path from 'node:path';
+import { stitch } from '@google/stitch-sdk';
+
+import { loadStitchEnv } from './stitch-env.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
-const projectId = process.env.PROJECT_ID ?? '3299141328605568565';
+const projectId = process.env.PROJECT_ID ?? '6508137877650248936';
 const screenId = process.argv[2];
 const screenName = process.argv[3] || screenId;
 
 if (!screenId) {
-  console.error('Usage: node scripts/fetch-one-screen.mjs <screenId> [screenName]');
+  console.error('Usage: PROJECT_ID=<project-id> node scripts/fetch-one-screen.mjs <screenId> [screenName]');
   process.exit(1);
 }
 
-let apiKey = process.env.STITCH_API_KEY;
-const secretPaths = [
-  '/home/rog/knowledge-base/kai/secrets/api-key.md',
-  '/home/rog/knowledge-base/kai/secrets/api-keys.md',
-  '/home/rog/knowledge-base/secrets/api-key.md',
-  '/home/rog/knowledge-base/secrets/api-keys.md',
-  '/mnt/d/knowledge-base/kai/secrets/api-key.md',
-  '/mnt/d/knowledge-base/kai/secrets/api-keys.md',
-];
-for (const secretsPath of secretPaths) {
-  if (apiKey || !fs.existsSync(secretsPath)) continue;
-  const text = fs.readFileSync(secretsPath, 'utf8');
-  const m = text.match(/(?:STITCH_API_KEY|SITCH_API_KEY)\s*[:=]\s*(.+)/);
-  if (m) apiKey = m[1].trim().replace(/^["']|["']$/g, '');
-}
-if (!apiKey) { console.error('No API key'); process.exit(1); }
+loadStitchEnv();
 
-const env = { ...process.env, STITCH_API_KEY: apiKey };
-const payload = JSON.stringify({ projectId, screenId });
 console.error(`Fetching ${screenName} (${screenId})...`);
-
-const result = cp.spawnSync('npx', [
-  '@_davideast/stitch-mcp', 'tool', 'get_screen_code',
-  '-d', payload
-], { cwd: repoRoot, env, encoding: 'utf8' });
-
-if (result.status !== 0) {
-  console.error(`Failed: ${result.stderr}`);
-  process.exit(1);
-}
-
-let data;
-try { data = JSON.parse(result.stdout); } catch { console.error('Parse error'); process.exit(1); }
-
-if (!data.htmlContent) {
-  console.error('No htmlContent in response');
-  console.error('Keys:', Object.keys(data));
-  process.exit(1);
-}
+const screen = await stitch.project(projectId).getScreen(screenId);
+const htmlUrl = await screen.getHtml();
+const imageUrl = await screen.getImage();
 
 const screenDir = path.join(repoRoot, 'exports', projectId, 'screens', screenId);
 fs.mkdirSync(screenDir, { recursive: true });
 
+if (htmlUrl) {
+  const htmlResponse = await fetch(htmlUrl);
+  if (!htmlResponse.ok) {
+    throw new Error(`Failed to download HTML for ${screenId}: ${htmlResponse.status}`);
+  }
+  fs.writeFileSync(path.join(screenDir, 'screen.html'), await htmlResponse.text());
+}
+
+if (imageUrl) {
+  const imageResponse = await fetch(imageUrl);
+  if (!imageResponse.ok) {
+    throw new Error(`Failed to download image for ${screenId}: ${imageResponse.status}`);
+  }
+  fs.writeFileSync(path.join(screenDir, 'screen.png'), Buffer.from(await imageResponse.arrayBuffer()));
+}
+
 const screenJson = {
   id: screenId,
   name: `projects/${projectId}/screens/${screenId}`,
-  title: data.title || screenName,
-  deviceType: 'MOBILE',
-  htmlContent: data.htmlContent,
-  screenshot: data.screenshot || null,
+  title: screen.data?.title || screenName,
+  deviceType: screen.data?.deviceType ?? 'MOBILE',
+  htmlUrl,
+  imageUrl,
+  data: screen.data,
 };
 
-fs.writeFileSync(path.join(screenDir, 'screen.json'), JSON.stringify(screenJson, null, 2));
-console.error(`Saved: ${screenName} → exports/${projectId}/screens/${screenId}/screen.json`);
+fs.writeFileSync(path.join(screenDir, 'screen.json'), JSON.stringify(screenJson, null, 2) + '\n');
+console.error(`Saved: ${screenName} -> exports/${projectId}/screens/${screenId}`);

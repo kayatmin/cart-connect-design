@@ -2,8 +2,8 @@
 # Adjust to your actual client config shape if needed.
 
 [mcp_servers.stitch]
-command = "npx"
-args = ["@_davideast/stitch-mcp", "proxy"]
+command = "node"
+args = ["/home/rog/projects/cart-connect/cart-connect-design/scripts/stitch-proxy.mjs"]
 
 [mcp_servers.stitch.env]
 # Prefer runtime export or a wrapper that injects the real key.

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#2a1801",
+                        "background": "#fbf9fa",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#102033",
+                        "surface-container-high": "#eae7e9",
+                        "container-success-text": "#166D4B",
+                        "container-active-bg": "#E8F0FF",
+                        "inverse-on-surface": "#f2f0f2",
+                        "container-success-bg": "#E7F6EE",
+                        "on-secondary-container": "#fefcff",
+                        "tertiary-fixed": "#ffddb9",
+                        "surface-dim": "#dbd9db",
+                        "inverse-surface": "#303032",
+                        "on-surface": "#1b1b1d",
+                        "text-secondary": "#586174",
+                        "text-tertiary": "#8A94A6",
+                        "on-secondary-fixed": "#00174b",
+                        "surface": "#fbf9fa",
+                        "warning-orange": "#8A5A00",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-background": "#1b1b1d",
+                        "surface-container": "#efedef",
+                        "primary": "#000714",
+                        "container-waiting-text": "#6F4700",
+                        "surface-container-low": "#f5f3f5",
+                        "primary-fixed-dim": "#b8c8e1",
+                        "on-tertiary-container": "#a0815f",
+                        "text-primary": "#111827",
+                        "secondary": "#0051d5",
+                        "on-surface-variant": "#44474c",
+                        "on-primary-fixed": "#0c1c2f",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "border-soft": "#DCE2EA",
+                        "tertiary": "#0d0500",
+                        "container-danger-bg": "#FDECEC",
+                        "on-error-container": "#93000a",
+                        "surface-muted": "#EEF1F5",
+                        "surface-variant": "#e4e2e4",
+                        "on-primary-container": "#78889f",
+                        "waiting-amber": "#F2A900",
+                        "container-waiting-bg": "#FFF4D6",
+                        "tertiary-container": "#2e1b03",
+                        "inverse-primary": "#b8c8e1",
+                        "container-danger-text": "#9F1D14",
+                        "container-active-text": "#1D4ED8",
+                        "secondary-container": "#316bf3",
+                        "success-green": "#167A55",
+                        "ink-dark": "#07111F",
+                        "outline": "#74777d",
+                        "danger-red": "#B42318",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d4e4fe",
+                        "on-primary-fixed-variant": "#39485d",
+                        "on-secondary": "#ffffff",
+                        "bg-base": "#F6F7F9",
+                        "surface-container-highest": "#e4e2e4",
+                        "surface-white": "#FFFFFF",
+                        "surface-bright": "#fbf9fa",
+                        "outline-variant": "#c4c6cd",
+                        "on-tertiary-fixed-variant": "#5a4225",
+                        "tertiary-fixed-dim": "#e4c09a",
+                        "surface-tint": "#505f75",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "error": "#ba1a1a",
+                        "surface-raised": "#FBFCFE",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "3xl": "48px",
+                        "section-gap": "20px",
+                        "2xs": "2px",
+                        "2xl": "32px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "xl": "24px",
+                        "button-height": "52px",
+                        "page-margin": "16px",
+                        "md": "12px",
+                        "lg": "16px",
+                        "touch-target-min": "44px"
+                    },
+                    "fontFamily": {
+                        "screen-title": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "data-tabular": ["IBM Plex Mono"],
+                        "card-title": ["Plus Jakarta Sans"],
+                        "section-title": ["Plus Jakarta Sans"],
+                        "body-strong": ["Work Sans"],
+                        "metadata": ["Work Sans"],
+                        "label": ["Work Sans"],
+                        "body": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "screen-title": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "display": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "data-tabular": ["13px", {"lineHeight": "18px", "fontWeight": "600"}],
+                        "card-title": ["15px", {"lineHeight": "20px", "fontWeight": "700"}],
+                        "section-title": ["17px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "body-strong": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "metadata": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "label": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body { background-color: #F6F7F9; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-background selection:bg-secondary/30">
+<!-- Top Navigation Bar (Shared Component Logic) -->
+<header class="flex justify-between items-center h-[52px] px-4 w-full z-50 sticky top-0 bg-[#FFFFFF] dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-touch-target-min h-touch-target-min text-[#102033] dark:text-slate-100 active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold text-[#102033] tracking-tighter text-lg dark:text-white">CartConnect</h1>
+</div>
+<div class="flex items-center">
+<button class="flex items-center justify-center w-touch-target-min h-touch-target-min text-[#102033] dark:text-slate-100 active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col min-h-[calc(100vh-52px)] pb-3xl">
+<!-- Header Summary Section -->
+<section class="bg-surface-white px-page-margin py-lg border-b border-border-soft">
+<div class="flex justify-between items-start mb-md">
+<div class="flex flex-col">
+<span class="font-label text-text-tertiary uppercase tracking-wider mb-xs">Customer</span>
+<h2 class="font-screen-title text-screen-title text-primary">Julian R.</h2>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center px-sm py-2xs rounded-full bg-container-active-bg text-container-active-text font-label">
+<span class="w-2 h-2 rounded-full bg-secondary mr-sm"></span>
+                        Active
+                    </span>
+<span class="font-data-tabular text-data-tabular text-text-secondary mt-sm">04:12</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md bg-surface-raised rounded-lg border border-border-soft">
+<div class="flex flex-col">
+<span class="font-label text-text-tertiary">Cart Subtotal</span>
+<span class="font-display text-display text-primary">$142.50</span>
+</div>
+<div class="flex gap-2">
+<button class="h-button-height px-lg bg-primary text-white font-body-strong rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+                        Accept
+                    </button>
+<button class="h-button-height px-lg border border-border-soft text-danger-red font-body-strong rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+                        Decline
+                    </button>
+</div>
+</div>
+<button class="w-full mt-sm py-sm text-text-secondary font-label flex items-center justify-center gap-sm active:opacity-60">
+<span class="material-symbols-outlined text-[18px]" data-icon="logout">logout</span>
+                End Session
+            </button>
+</section>
+<!-- Chat Timeline -->
+<section class="flex-grow flex flex-col gap-section-gap px-page-margin py-xl bg-bg-base">
+<div class="flex flex-col items-center">
+<span class="px-md py-2xs bg-surface-muted text-text-tertiary font-metadata rounded-full">Session started at 14:02</span>
+</div>
+<!-- Customer Message -->
+<div class="flex flex-col max-w-[85%] self-start">
+<div class="flex items-center gap-sm mb-xs">
+<span class="font-label text-text-secondary">Julian R.</span>
+<span class="font-data-tabular text-metadata text-text-tertiary">14:03</span>
+</div>
+<div class="bg-surface-white p-md rounded-xl rounded-tl-none border border-border-soft shadow-sm">
+<p class="font-body text-on-surface">Hello! I'm looking for high-quality headphones and a reliable USB-C cable for my laptop. Any recommendations?</p>
+</div>
+</div>
+<!-- Agent Message -->
+<div class="flex flex-col max-w-[85%] self-end">
+<div class="flex items-center justify-end gap-sm mb-xs">
+<span class="font-data-tabular text-metadata text-text-tertiary">14:05</span>
+<span class="font-label text-primary-container">Sarah (Agent)</span>
+</div>
+<div class="bg-primary-container p-md rounded-xl rounded-tr-none shadow-sm">
+<p class="font-body text-surface-bright">Of course, Julian! I've added our top-rated Premium Wireless Headphones and a reinforced USB-C cable to your cart. They are both highly durable and great for daily use.</p>
+</div>
+</div>
+<!-- Customer Message -->
+<div class="flex flex-col max-w-[85%] self-start">
+<div class="flex items-center gap-sm mb-xs">
+<span class="font-label text-text-secondary">Julian R.</span>
+<span class="font-data-tabular text-metadata text-text-tertiary">14:06</span>
+</div>
+<div class="bg-surface-white p-md rounded-xl rounded-tl-none border border-border-soft shadow-sm">
+<p class="font-body text-on-surface">That looks great. Can you check if the headphones have noise cancellation?</p>
+</div>
+</div>
+</section>
+<!-- Cart Panel (Floating Sheet Style) -->
+<section class="mt-auto bg-surface-white rounded-t-xl border-t border-border-soft shadow-2xl overflow-hidden">
+<div class="px-page-margin pt-lg pb-md flex justify-between items-center border-b border-border-soft bg-surface-raised">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="shopping_cart" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<h3 class="font-section-title text-section-title">Current Cart</h3>
+<span class="ml-xs px-2 py-0.5 bg-secondary text-white rounded font-data-tabular text-xs">2</span>
+</div>
+<button class="text-text-secondary w-touch-target-min h-touch-target-min flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<div class="divide-y divide-border-soft">
+<!-- Cart Item 1 -->
+<div class="p-page-margin flex gap-md">
+<div class="w-16 h-16 bg-surface-muted rounded overflow-hidden flex-shrink-0 border border-border-soft">
+<img alt="Premium Headphones" class="w-full h-full object-cover" data-alt="A close-up studio photograph of premium over-ear wireless headphones in a sleek matte black finish. The lighting is soft and cinematic, highlighting the professional industrial design and textured ear pads. The aesthetic is modern and high-end, aligned with a professional retail environment focused on quality audio equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_wSSr90adkwHg92-NDUz6lyn1SyLMTCb1Wr8r6EDxkXbyUGXA-oF8L-vigcz1cJp0S2SoDqmNv9pti1JF7EJynVOt4qZl1YqUXEYwacI_skFMWxxIAVDQ0sYrknyOPmbQGxU4jeAA51wv6Ibqs1T80eRDHZh7avf9tt1maYYn4eHdQAuVSc2JFH841C-enVSNb1Iaf8HtCDQF7qqFkVOU7tMm4KoiRf6rlmo8XjgXixoxdTFyEkX6zpOQnsLQVYyRAUQWBttnrqM"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-card-title text-card-title text-primary leading-tight">Premium Headphones</h4>
+<p class="font-metadata text-text-tertiary">SKU: AUD-2940-BK</p>
+</div>
+<span class="font-data-tabular text-primary">$129.00</span>
+</div>
+<div class="flex justify-between items-end mt-sm">
+<div class="flex items-center bg-surface-muted rounded-lg border border-border-soft">
+<button class="w-11 h-10 flex items-center justify-center text-text-secondary active:bg-slate-200 rounded-l-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<span class="w-10 text-center font-data-tabular text-primary">1</span>
+<button class="w-11 h-10 flex items-center justify-center text-text-secondary active:bg-slate-200 rounded-r-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<button class="h-10 px-md flex items-center justify-center text-danger-red font-label hover:bg-container-danger-bg rounded-lg transition-colors">
+                                Remove
+                            </button>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="p-page-margin flex gap-md">
+<div class="w-16 h-16 bg-surface-muted rounded overflow-hidden flex-shrink-0 border border-border-soft">
+<img alt="USB-C Cable" class="w-full h-full object-cover" data-alt="A detailed shot of a premium braided USB-C to USB-C charging cable coiled neatly against a neutral studio backdrop. The cable features reinforced silver-toned metal connectors and a durable black mesh texture. The lighting is bright and industrial, emphasizing the professional grade construction and utilitarian purpose of the tech accessory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd1DOmnNVuZRy0i3neQvljJpMt_TPFdWwiOBwUYNRegGl8MvLi722HMW-EpCQzo2uxBy8WDJcuIZXWgZ6rIXsp-6YPFDWTDZJ1K1It5DXMHektZQ4_OMB50n7eU46bCHO4__ve0lCm8gVSX1oaPLIA8_8DyP1zw0maLgE9QF9h_sAW3jc_5E_JAhygwfVWYeyzA9U-0XXidkMbcGy12BXXRUzzakcL8YvOqNqEWJxm_KxZYQmCdCg7t3U29RFic1K4gf0r9w5Yhk8"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-card-title text-card-title text-primary leading-tight">USB-C Cable (2m)</h4>
+<p class="font-metadata text-text-tertiary">SKU: ACC-105-BRAID</p>
+</div>
+<span class="font-data-tabular text-primary">$13.50</span>
+</div>
+<div class="flex justify-between items-end mt-sm">
+<div class="flex items-center bg-surface-muted rounded-lg border border-border-soft">
+<button class="w-11 h-10 flex items-center justify-center text-text-secondary active:bg-slate-200 rounded-l-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<span class="w-10 text-center font-data-tabular text-primary">1</span>
+<button class="w-11 h-10 flex items-center justify-center text-text-secondary active:bg-slate-200 rounded-r-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+<button class="h-10 px-md flex items-center justify-center text-danger-red font-label hover:bg-container-danger-bg rounded-lg transition-colors">
+                                Remove
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Chat Composer (Sticky) -->
+<div class="sticky bottom-0 bg-surface-raised border-t border-border-soft px-page-margin py-md flex items-end gap-sm z-50">
+<div class="flex-grow bg-white border border-border-soft rounded-xl p-xs focus-within:ring-2 focus-within:ring-secondary/20 transition-shadow">
+<textarea class="w-full border-none focus:ring-0 font-body text-body py-sm px-md resize-none" placeholder="Type a message..." rows="1"></textarea>
+</div>
+<button class="w-button-height h-button-height flex-shrink-0 bg-primary text-white rounded-xl flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="send" data-weight="fill" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</main>
+<!-- Bottom Nav Bar (Shared Component Logic) -->
+<nav class="fixed bottom-0 left-0 w-full z-[60] flex justify-around items-center px-2 py-3 bg-[#FBFCFE] dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center text-[#102033] dark:text-white bg-slate-100 dark:bg-slate-800 rounded-lg py-1 w-full scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Sessions</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 py-1 w-full hover:text-[#102033] dark:hover:text-white">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Inventory</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 py-1 w-full hover:text-[#102033] dark:hover:text-white">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Stats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 py-1 w-full hover:text-[#102033] dark:hover:text-white">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Profile</span>
+</div>
+</nav>
+</body></html>

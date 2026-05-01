@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "text-tertiary": "#8A94A6",
+                        "primary-fixed-dim": "#b8c8e1",
+                        "tertiary-fixed": "#ffddb9",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "on-primary-fixed-variant": "#39485d",
+                        "on-tertiary-fixed-variant": "#5a4225",
+                        "on-tertiary-container": "#a0815f",
+                        "error-container": "#ffdad6",
+                        "bg-base": "#F6F7F9",
+                        "on-primary-container": "#78889f",
+                        "on-tertiary": "#ffffff",
+                        "surface-raised": "#FBFCFE",
+                        "inverse-on-surface": "#f2f0f2",
+                        "recoverable-warning": "#8A5A00",
+                        "background": "#fbf9fa",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#fefcff",
+                        "inverse-primary": "#b8c8e1",
+                        "text-primary": "#111827",
+                        "surface-dim": "#dbd9db",
+                        "surface-container-low": "#f5f3f5",
+                        "surface-container": "#efedef",
+                        "surface-container-high": "#eae7e9",
+                        "outline-variant": "#c4c6cd",
+                        "container-warning": "#FFF7E8",
+                        "on-surface-variant": "#44474c",
+                        "surface-container-lowest": "#ffffff",
+                        "clear-green": "#167A55",
+                        "tertiary-fixed-dim": "#e4c09a",
+                        "surface": "#FFFFFF",
+                        "primary-fixed": "#d4e4fe",
+                        "tertiary": "#0d0500",
+                        "surface-container-highest": "#e4e2e4",
+                        "secondary": "#0051d5",
+                        "surface-variant": "#e4e2e4",
+                        "on-primary-fixed": "#0c1c2f",
+                        "outline": "#74777d",
+                        "on-secondary-fixed": "#00174b",
+                        "container-active": "#E8F0FF",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1b1b1d",
+                        "text-secondary": "#586174",
+                        "surface-tint": "#505f75",
+                        "waiting-amber": "#F2A900",
+                        "primary-ink-dark": "#07111F",
+                        "inverse-surface": "#303032",
+                        "on-surface": "#1b1b1d",
+                        "container-success": "#E7F6EE",
+                        "tertiary-container": "#2e1b03",
+                        "border-soft": "#DCE2EA",
+                        "surface-bright": "#fbf9fa",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "danger-red": "#B42318",
+                        "container-waiting": "#FFF4D6",
+                        "surface-muted": "#EEF1F5",
+                        "container-danger": "#FDECEC",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#2a1801",
+                        "secondary-container": "#316bf3",
+                        "primary-container": "#102033",
+                        "primary": "#000714"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "20px",
+                        "3xl": "48px",
+                        "xl": "24px",
+                        "lg": "16px",
+                        "page-margin": "16px",
+                        "md": "12px",
+                        "2xl": "32px",
+                        "sm": "8px",
+                        "2xs": "2px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "card-title": ["Plus Jakarta Sans"],
+                        "screen-title": ["Plus Jakarta Sans"],
+                        "label": ["Source Sans 3"],
+                        "data-mono": ["IBM Plex Mono"],
+                        "body-strong": ["Source Sans 3"],
+                        "metadata": ["Source Sans 3"],
+                        "display": ["Plus Jakarta Sans"],
+                        "section-title": ["Plus Jakarta Sans"],
+                        "body": ["Source Sans 3"]
+                    },
+                    "fontSize": {
+                        "card-title": ["15px", {"lineHeight": "20px", "fontWeight": "700"}],
+                        "screen-title": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                        "label": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-strong": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "metadata": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "display": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "section-title": ["17px", {"lineHeight": "24px", "fontWeight": "700"}],
+                        "body": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F6F7F9;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen p-page-margin">
+<!-- Re-auth Container -->
+<main class="w-full max-w-md">
+<!-- Surface Card -->
+<div class="bg-surface rounded-xl border border-border-soft overflow-hidden">
+<!-- Visual Hero (Industrial Restraint) -->
+<div class="h-48 relative overflow-hidden bg-surface-muted">
+<img class="w-full h-full object-cover grayscale opacity-20" data-alt="A clean, minimalist composition of industrial structural beams and glass surfaces in a high-key architectural setting. The lighting is soft and uniform, creating a calm, professional light-mode aesthetic using a palette of muted silvers and architectural whites. The mood is precise and stable, reflecting an atmosphere of secure operational control and utilitarian restraint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp71XLvU-4gc09XbJ3WRF3mibIEcWVYMiOEebtU_cjgwcMXTEJi4RIMFDyFYFcX_V8w5xBqj_UcQXaxYhofhq3WYjrnFbGVT3sdx1mFYIXrTbg-Shx4g_z8zK9_mrRxA8nsybQDTwhceVZu8FRT4D4Qo0UDwPEpeQduBZc912ptqSm75raQS3UAZv5Sb23P4DykTi7L8C1pneXgJmbvlg05DdRi8IoPFzTwwF2aT8zLVSZZntFEb9ioxm880Kg5IE_0zSrYL-bFy8"/>
+<!-- Status Rail Equivalent (Subtle operational indicator) -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-text-tertiary"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-surface-raised border border-border-soft flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-xl space-y-lg text-center">
+<div class="space-y-sm">
+<h1 class="font-screen-title text-screen-title text-primary-container">
+                        Session Expired
+                    </h1>
+<p class="font-body text-body text-text-secondary px-sm">
+                        For your security, your session has timed out. Please sign in again to continue managing your queue.
+                    </p>
+</div>
+<div class="pt-sm">
+<!-- High-Target Primary CTA -->
+<button class="w-full h-[52px] bg-primary-container text-on-tertiary font-body-strong text-body-strong rounded-lg flex items-center justify-center gap-sm active:scale-[0.98] transition-transform duration-150">
+                        Sign in again
+                        <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Subtle Help Text -->
+<div class="pt-2 text-center">
+<span class="font-metadata text-metadata text-text-tertiary uppercase tracking-wider">
+                        CartConnect Security Service
+                    </span>
+</div>
+</div>
+</div>
+<!-- System Footer (Non-distracting) -->
+<footer class="mt-xl flex flex-col items-center gap-xs">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-text-tertiary text-sm" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-metadata text-metadata text-text-tertiary">Secured by Operational Console API</span>
+</div>
+<p class="font-metadata text-metadata text-text-tertiary">
+                Version 4.2.0-stable
+            </p>
+</footer>
+</main>
+<!-- Suppressed Navigation Shell as per task requirements -->
+<!-- (No TopAppBar or BottomNavBar rendered for transactional security state) -->
+</body></html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;family=Source+Sans+3:wght@400;500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#505f75",
+                        "tertiary-fixed": "#9af5c7",
+                        "secondary-container": "#316bf3",
+                        "primary-fixed": "#d4e4fe",
+                        "secondary": "#0051d5",
+                        "tertiary": "#000904",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#b8c8e1",
+                        "surface-container-high": "#e7e8ea",
+                        "on-secondary-fixed": "#00174b",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-dim": "#d9dadc",
+                        "background": "#f8f9fb",
+                        "primary-fixed-dim": "#b8c8e1",
+                        "on-surface-variant": "#44474c",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-fixed": "#0c1c2f",
+                        "on-primary-container": "#78889f",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-error": "#ffffff",
+                        "primary": "#000714",
+                        "on-error-container": "#93000a",
+                        "outline": "#74777d",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#fefcff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#003ea8",
+                        "surface-container": "#edeef0",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-primary-fixed-variant": "#39485d",
+                        "on-tertiary-container": "#3c976f",
+                        "primary-container": "#102033",
+                        "tertiary-container": "#002516",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f8f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#dbe1ff",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e2e4",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed-dim": "#7ed8ac",
+                        "on-background": "#191c1e",
+                        "surface": "#f8f9fb",
+                        "outline-variant": "#c4c6cd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "0.75rem",
+                        "container-margin": "1rem",
+                        "inline-gap": "0.5rem",
+                        "section-padding": "1.5rem",
+                        "touch-target-min": "2.75rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Public Sans"],
+                        "label-caps": ["Space Grotesk"],
+                        "h1": ["Plus Jakarta Sans"],
+                        "data-mono": ["Space Grotesk"],
+                        "h2": ["Plus Jakarta Sans"],
+                        "body-sm": ["Public Sans"],
+                        "source-sans": ["Source Sans 3"],
+                        "ibm-mono": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "h2": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .chat-bubble-shadow { box-shadow: 0 1px 2px rgba(16, 32, 51, 0.05); }
+        .composer-shadow { box-shadow: 0 -4px 12px rgba(16, 32, 51, 0.04); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f8f9fb] text-on-background min-h-screen flex flex-col font-body-md overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-slate-900 border-b border-[#E2E8F0] dark:border-slate-800 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 h-14">
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-[#102033] dark:text-slate-100 active:opacity-70 transition-opacity" data-icon="arrow_back">arrow_back</button>
+<div class="flex flex-col">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#102033] dark:text-slate-100">Julian R.</span>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-secondary-container/10 px-1.5 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-secondary-container">Active</span>
+</div>
+<span class="font-ibm-mono text-[11px] text-on-surface-variant">04:12</span>
+</div>
+</div>
+</div>
+<button class="material-symbols-outlined text-[#102033] dark:text-slate-100 active:opacity-70 transition-opacity" data-icon="more_vert">more_vert</button>
+</header>
+<!-- Content Canvas -->
+<main class="flex-1 overflow-y-auto pt-14 pb-24 px-4 space-y-6">
+<!-- Context Chip Section -->
+<div class="sticky top-2 z-30 flex justify-center mt-3">
+<div class="bg-surface-container-low border border-outline-variant px-3 py-2 rounded-xl flex items-center gap-2 chat-bubble-shadow">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-caps text-on-surface-variant uppercase">2 items in cart · $142.50</span>
+<button class="material-symbols-outlined text-secondary text-lg ml-1" data-icon="open_in_new">open_in_new</button>
+</div>
+</div>
+<!-- Chat Timeline -->
+<div class="flex flex-col gap-6 max-w-2xl mx-auto w-full">
+<!-- Customer Bubble -->
+<div class="flex flex-col items-start max-w-[85%] group">
+<div class="flex items-center gap-2 mb-1 px-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Julian R.</span>
+<span class="font-ibm-mono text-[10px] text-outline">14:01</span>
+</div>
+<div class="bg-white border border-[#E2E8F0] p-4 rounded-xl rounded-tl-none chat-bubble-shadow">
+<p class="font-source-sans text-on-surface text-body-md">Hello! I'm looking for high-quality headphones and a reliable USB-C cable for my laptop. Any recommendations?</p>
+</div>
+</div>
+<!-- Agent Bubble -->
+<div class="flex flex-col items-end max-w-[85%] self-end group">
+<div class="flex items-center gap-2 mb-1 px-1">
+<span class="font-ibm-mono text-[10px] text-outline">14:02</span>
+<span class="font-label-caps text-[10px] text-secondary-container uppercase">Sarah (Agent)</span>
+</div>
+<div class="bg-primary-container p-4 rounded-xl rounded-tr-none chat-bubble-shadow">
+<p class="font-source-sans text-white text-body-md leading-relaxed">Of course, Julian! I've added our top-rated Premium Wireless Headphones and a reinforced USB-C cable to your cart. They are both highly durable and great for daily use.</p>
+</div>
+<!-- Dynamic Content Attachment -->
+<div class="mt-2 w-full grid grid-cols-2 gap-2">
+<div class="bg-white border border-[#E2E8F0] p-2 rounded-lg flex flex-col gap-1">
+<div class="aspect-square bg-surface-container rounded-md overflow-hidden">
+<img alt="Premium Wireless Headphones" class="w-full h-full object-cover" data-alt="A professional studio product shot of high-end wireless over-ear headphones in charcoal grey. The lighting is crisp and industrial, highlighting the metallic texture and leather ear cushions. The overall aesthetic is minimalist and premium, presented on a clean white background with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1_CVaELEog-Qa2xDokuLbGJWdMxpTpRM4mcYcC6Bvumycqbmj06s-Mg4H2wexutzCHgVbzNUq0HoKHRheOWAI2H9RZ5XbPUK72R2kzLrgX_ullLevcqfxwZIUYDXI774qjdumMFqtqsGuS_DhCobbvW9RPnXTrQ6ngxAGjsYMgpjS20mce9LQ4I9LjoeV7hg7Srr0VwVbJTzdmHbO9afEhvn5tjI3GnoaHD24p-ui-uVjXH_486ry66OT59UitK0mVebmS7uZl_c"/>
+</div>
+<span class="font-label-caps text-[10px] truncate">Premium Wireless...</span>
+<span class="font-ibm-mono text-[10px] font-bold">$129.00</span>
+</div>
+<div class="bg-white border border-[#E2E8F0] p-2 rounded-lg flex flex-col gap-1">
+<div class="aspect-square bg-surface-container rounded-md overflow-hidden">
+<img alt="USB-C Cable" class="w-full h-full object-cover" data-alt="A close-up photograph of a professional-grade braided USB-C cable, showing the intricate texture of the black nylon reinforcement. The connector is finished in brushed aluminum, reflecting cool studio lighting. The style is utilitarian and high-performance, emphasizing durability and precision engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW8XcZPPeb7SmBTzjIDzZ7bzE0FkYdCcoEwuA-9H4tOL21u5FW9JwLdR767fpj8yVFzMeh9PPAtR04BoLkNvaKIea8iNdBfjlOvEhS_pLdYvLj_LZ10fYVKtaSkpdffdDf9WXqH50i0mwUYkFVZZc2jdh_s47LhrKRDGAtOnfOfFm5qtXk6aV6QosuurGI560Std3p0K4L05kwI5_KjndvHK-I0Pp6H_5Tn3mYiAyJSDSSQYsVqWAVI6gAKPqHuwCpn3chUd0Jt98"/>
+</div>
+<span class="font-label-caps text-[10px] truncate">USB-C Cable 2M</span>
+<span class="font-ibm-mono text-[10px] font-bold">$13.50</span>
+</div>
+</div>
+</div>
+<!-- Customer Bubble -->
+<div class="flex flex-col items-start max-w-[85%] group">
+<div class="flex items-center gap-2 mb-1 px-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Julian R.</span>
+<span class="font-ibm-mono text-[10px] text-outline">14:03</span>
+</div>
+<div class="bg-white border border-[#E2E8F0] p-4 rounded-xl rounded-tl-none chat-bubble-shadow">
+<p class="font-source-sans text-on-surface text-body-md">That looks great. Can you check if the headphones have noise cancellation?</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Composer Section -->
+<footer class="fixed bottom-0 left-0 w-full bg-white border-t border-[#E2E8F0] composer-shadow px-4 py-3 z-50">
+<div class="max-w-2xl mx-auto flex items-end gap-3">
+<button class="material-symbols-outlined text-outline p-2 hover:bg-surface-container-low rounded-full transition-colors" data-icon="add_circle">add_circle</button>
+<div class="flex-1 relative">
+<textarea class="w-full bg-surface-container-lowest border border-[#E2E8F0] rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary-container focus:border-transparent outline-none resize-none font-body-md text-on-surface placeholder:text-outline h-[48px]" placeholder="Type a message..." rows="1"></textarea>
+</div>
+<button class="bg-primary-container text-white w-12 h-12 rounded-xl flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+<div class="h-1 bg-surface-container-highest w-16 rounded-full mx-auto mt-3 opacity-50"></div>
+</footer>
+<!-- BottomNavBar Suppression Check: This is a task-focused sub-page (chat detail), so global nav is suppressed per instructions. -->
+</body></html>

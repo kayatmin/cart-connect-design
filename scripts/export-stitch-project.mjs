@@ -1,30 +1,74 @@
-import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
+import { stitch } from '@google/stitch-sdk';
+
+import { loadStitchEnv, requireProjectId } from './stitch-env.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
-const projectId = process.env.PROJECT_ID;
-
-if (!projectId) {
-  console.error('PROJECT_ID is required, e.g. PROJECT_ID=<id> npm run stitch:export');
-  process.exit(1);
-}
+const projectId = requireProjectId('PROJECT_ID=<id> npm run stitch:export');
 
 const exportDir = path.join(repoRoot, 'exports', projectId);
 fs.mkdirSync(exportDir, { recursive: true });
 
-const command = `source scripts/load-stitch-env.sh && npx @_davideast/stitch-mcp snapshot -p ${projectId}`;
-const result = spawnSync('bash', ['-lc', command], {
-  cwd: repoRoot,
-  encoding: 'utf8'
-});
+loadStitchEnv();
 
-fs.writeFileSync(path.join(exportDir, 'snapshot.stdout.log'), result.stdout ?? '');
-fs.writeFileSync(path.join(exportDir, 'snapshot.stderr.log'), result.stderr ?? '');
+const project = stitch.project(projectId);
+const screens = await project.screens();
+const manifest = {
+  projectId,
+  exportedAt: new Date().toISOString(),
+  screenCount: screens.length,
+  screens: [],
+};
 
-if (result.status !== 0) {
-  console.error(result.stderr || 'stitch export failed');
-  process.exit(result.status ?? 1);
+for (const screen of screens) {
+  const screenDir = path.join(exportDir, 'screens', screen.screenId);
+  fs.mkdirSync(screenDir, { recursive: true });
+  const htmlUrl = await screen.getHtml();
+  const imageUrl = await screen.getImage();
+  const title = screen.data?.title ?? screen.data?.displayName ?? screen.screenId;
+
+  if (htmlUrl) {
+    const htmlResponse = await fetch(htmlUrl);
+    if (!htmlResponse.ok) {
+      throw new Error(`Failed to download HTML for ${screen.screenId}: ${htmlResponse.status}`);
+    }
+    fs.writeFileSync(path.join(screenDir, 'screen.html'), await htmlResponse.text());
+  }
+
+  if (imageUrl) {
+    const imageResponse = await fetch(imageUrl);
+    if (!imageResponse.ok) {
+      throw new Error(`Failed to download image for ${screen.screenId}: ${imageResponse.status}`);
+    }
+    const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
+    fs.writeFileSync(path.join(screenDir, 'screen.png'), imageBuffer);
+  }
+
+  manifest.screens.push({
+    id: screen.screenId,
+    title,
+    htmlUrl,
+    imageUrl,
+  });
+  fs.writeFileSync(
+    path.join(screenDir, 'screen.json'),
+    JSON.stringify(
+      {
+        id: screen.screenId,
+        name: `projects/${projectId}/screens/${screen.screenId}`,
+        title,
+        deviceType: screen.data?.deviceType ?? 'MOBILE',
+        htmlUrl,
+        imageUrl,
+        data: screen.data,
+      },
+      null,
+      2,
+    ) + '\n',
+  );
 }
 
-console.log(`Snapshot command completed for project ${projectId}. See ${exportDir}`);
+fs.writeFileSync(path.join(exportDir, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+
+console.log(`Exported ${screens.length} screens for project ${projectId} to ${exportDir}`);
