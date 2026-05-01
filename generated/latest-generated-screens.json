@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-04-30T06:36:00Z",
+  "projectId": "6508137877650248936",
+  "source": "cart-connect-mobile/design.md",
+  "stitchDesignSource": "cart-connect-design/design.md",
+  "screens": [
+    {
+      "key": "splash",
+      "title": "Splash / Bootstrap",
+      "screenId": "97cfbe1a46374737a4a543a9e7c70869",
+      "html": "exports/6508137877650248936/screens/97cfbe1a46374737a4a543a9e7c70869/screen.json",
+      "png": "exports/6508137877650248936/screens/97cfbe1a46374737a4a543a9e7c70869/screen.png"
+    },
+    {
+      "key": "login",
+      "title": "Login - CartConnect Premium",
+      "screenId": "468ba296daa449cab7931cb25a60b8cc",
+      "html": "exports/6508137877650248936/screens/468ba296daa449cab7931cb25a60b8cc/screen.json",
+      "png": "exports/6508137877650248936/screens/468ba296daa449cab7931cb25a60b8cc/screen.png"
+    },
+    {
+      "key": "dashboard",
+      "title": "Agent Dashboard",
+      "screenId": "80f85307ef664a959e138c7bdf286424",
+      "html": "exports/6508137877650248936/screens/80f85307ef664a959e138c7bdf286424/screen.json",
+      "png": "exports/6508137877650248936/screens/80f85307ef664a959e138c7bdf286424/screen.png"
+    },
+    {
+      "key": "sessionDetail",
+      "title": "Session Detail - Julian R.",
+      "screenId": "20a91724f3b94222970fbbd164c735ed",
+      "html": "exports/6508137877650248936/screens/20a91724f3b94222970fbbd164c735ed/screen.json",
+      "png": "exports/6508137877650248936/screens/20a91724f3b94222970fbbd164c735ed/screen.png"
+    },
+    {
+      "key": "chatFocus",
+      "title": "Chat Focus - Julian R.",
+      "screenId": "e7ad97141d254aa4a45daf3c504e1acc",
+      "html": "exports/6508137877650248936/screens/e7ad97141d254aa4a45daf3c504e1acc/screen.json",
+      "png": "exports/6508137877650248936/screens/e7ad97141d254aa4a45daf3c504e1acc/screen.png"
+    },
+    {
+      "key": "cartEdit",
+      "title": "Cart Edit - Julian R.",
+      "screenId": "26c98a232f814c0d8a15ab34e2a0ec2e",
+      "html": "exports/6508137877650248936/screens/26c98a232f814c0d8a15ab34e2a0ec2e/screen.json",
+      "png": "exports/6508137877650248936/screens/26c98a232f814c0d8a15ab34e2a0ec2e/screen.png"
+    },
+    {
+      "key": "inventoryAdd",
+      "title": "Inventory Add Sheet",
+      "screenId": "6f613a7fa1a04d90b83e8d6b894ac005",
+      "html": "exports/6508137877650248936/screens/6f613a7fa1a04d90b83e8d6b894ac005/screen.json",
+      "png": "exports/6508137877650248936/screens/6f613a7fa1a04d90b83e8d6b894ac005/screen.png"
+    },
+    {
+      "key": "authExpired",
+      "title": "Auth Expired",
+      "screenId": "f3961f9a49c44583b75b25afee00557a",
+      "html": "exports/6508137877650248936/screens/f3961f9a49c44583b75b25afee00557a/screen.json",
+      "png": "exports/6508137877650248936/screens/f3961f9a49c44583b75b25afee00557a/screen.png"
+    },
+    {
+      "key": "emptyState",
+      "title": "Empty Queue - All Clear",
+      "screenId": "d2e008b5c44e4bee807f0e90477c08b1",
+      "html": "exports/6508137877650248936/screens/d2e008b5c44e4bee807f0e90477c08b1/screen.json",
+      "png": "exports/6508137877650248936/screens/d2e008b5c44e4bee807f0e90477c08b1/screen.png"
+    },
+    {
+      "key": "apiError",
+      "title": "API / Network Error",
+      "screenId": "072b53ea32a04bf6a9895ebe1e4ec958",
+      "html": "exports/6508137877650248936/screens/072b53ea32a04bf6a9895ebe1e4ec958/screen.json",
+      "png": "exports/6508137877650248936/screens/072b53ea32a04bf6a9895ebe1e4ec958/screen.png"
+    }
+  ]
+}

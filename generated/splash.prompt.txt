@@ -1,4 +1,4 @@
-Design the CartConnect mobile session detail screen for agents.
+Design the CartConnect mobile splash / bootstrap screen.
 
 Use this source of truth:
 # CartConnect Mobile design.md
@@ -392,10 +392,9 @@ Brand notes:
 - Avoid generic dashboard filler and lorem ipsum
 
 Requirements:
-- customer identity
-- session status
-- accept / decline / end actions
-- chat timeline
-- cart panel with quantity controls and subtotal
-- room for checkout and discount actions
-- mobile-first and production-ready
+- mobile-first startup screen for the agent app
+- CartConnect wordmark or compact identity mark
+- small operational status line such as "Syncing agent workspace"
+- calm command-center feel
+- no marketing copy, no decorative hero, no stock imagery
+- production-ready Flutter-friendly layout

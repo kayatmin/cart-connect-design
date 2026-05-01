@@ -1,4 +1,4 @@
-Design the CartConnect mobile session detail screen for agents.
+Design the CartConnect mobile cart edit state for agents.
 
 Use this source of truth:
 # CartConnect Mobile design.md
@@ -392,10 +392,10 @@ Brand notes:
 - Avoid generic dashboard filler and lorem ipsum
 
 Requirements:
-- customer identity
-- session status
-- accept / decline / end actions
-- chat timeline
-- cart panel with quantity controls and subtotal
-- room for checkout and discount actions
+- active session context and customer identity
+- cart contents as the primary content
+- quantity controls with large mobile touch targets
+- remove item action that feels intentional, not alarming
+- clear subtotal and checkout readiness state
+- room for future discount and checkout actions without assuming unavailable backend features
 - mobile-first and production-ready

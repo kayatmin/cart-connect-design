@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'path';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
-const projectId = '3299141328605568565';
+const projectId = process.env.PROJECT_ID ?? '3299141328605568565';
 const screenId = process.argv[2];
 const screenName = process.argv[3] || screenId;
 
@@ -15,12 +15,19 @@ if (!screenId) {
   process.exit(1);
 }
 
-// Load API key
-const secretsPath = '/mnt/d/knowledge-base/kai/secrets/api-keys.md';
 let apiKey = process.env.STITCH_API_KEY;
-if (!apiKey && fs.existsSync(secretsPath)) {
+const secretPaths = [
+  '/home/rog/knowledge-base/kai/secrets/api-key.md',
+  '/home/rog/knowledge-base/kai/secrets/api-keys.md',
+  '/home/rog/knowledge-base/secrets/api-key.md',
+  '/home/rog/knowledge-base/secrets/api-keys.md',
+  '/mnt/d/knowledge-base/kai/secrets/api-key.md',
+  '/mnt/d/knowledge-base/kai/secrets/api-keys.md',
+];
+for (const secretsPath of secretPaths) {
+  if (apiKey || !fs.existsSync(secretsPath)) continue;
   const text = fs.readFileSync(secretsPath, 'utf8');
-  const m = text.match(/STITCH_API_KEY\s*[:=]\s*(.+)/);
+  const m = text.match(/(?:STITCH_API_KEY|SITCH_API_KEY)\s*[:=]\s*(.+)/);
   if (m) apiKey = m[1].trim().replace(/^["']|["']$/g, '');
 }
 if (!apiKey) { console.error('No API key'); process.exit(1); }

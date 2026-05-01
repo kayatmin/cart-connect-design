@@ -1,4 +1,4 @@
-Design the CartConnect mobile session detail screen for agents.
+Design the CartConnect mobile inventory add sheet for agents.
 
 Use this source of truth:
 # CartConnect Mobile design.md
@@ -392,10 +392,10 @@ Brand notes:
 - Avoid generic dashboard filler and lorem ipsum
 
 Requirements:
-- customer identity
-- session status
-- accept / decline / end actions
-- chat timeline
-- cart panel with quantity controls and subtotal
-- room for checkout and discount actions
+- bottom sheet or full-height modal suitable for Flutter mobile
+- search field as the first control
+- product results with thumbnail, title, variant, availability, price, and add action
+- quantity stepper with stable layout and large touch targets
+- loading and empty-search states that are quiet and useful
+- should feel connected to the session detail and cart edit screens
 - mobile-first and production-ready

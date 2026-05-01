@@ -4,7 +4,7 @@ import path from 'node:path';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
 const screen = process.env.SCREEN ?? 'dashboard';
-const projectId = process.env.PROJECT_ID;
+const projectId = process.env.PROJECT_ID ?? '3299141328605568565';
 const toolName = process.env.STITCH_GENERATE_TOOL ?? 'generate_screen_from_text';
 
 if (!projectId) {
@@ -25,7 +25,7 @@ const payloadPath = path.join(repoRoot, 'generated', `${screen}.request.json`);
 fs.writeFileSync(payloadPath, payload + '\n');
 
 const inlinePayload = JSON.stringify(payloadObject);
-const command = `source scripts/load-stitch-env.sh && npx @_davideast/stitch-mcp tool ${toolName} -d ${JSON.stringify(inlinePayload)}`;
+const command = `source scripts/load-stitch-env.sh && npx @_davideast/stitch-mcp tool ${toolName} -d '${inlinePayload}'`;
 const result = spawnSync('bash', ['-lc', command], {
   cwd: repoRoot,
   encoding: 'utf8'

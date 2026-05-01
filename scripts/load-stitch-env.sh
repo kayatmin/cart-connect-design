@@ -33,9 +33,19 @@ candidates=(
   "/knowledge-base/secrets/api-keys"
   "/knowledge-base/secrets/api-keys.md"
   "/home/rog/knowledge-base/secrets/api-keys"
+  "/home/rog/knowledge-base/secrets/api-key"
   "/home/rog/knowledge-base/secrets/api-keys.md"
+  "/home/rog/knowledge-base/secrets/api-key.md"
+  "/home/rog/knowledge-base/kai/secrets/api-key"
+  "/home/rog/knowledge-base/kai/secrets/api-key.md"
+  "/home/rog/knowledge-base/kai/secrets/api-keys"
+  "/home/rog/knowledge-base/kai/secrets/api-keys.md"
   "/mnt/d/knowledge-base/secrets/api-keys"
+  "/mnt/d/knowledge-base/secrets/api-key"
   "/mnt/d/knowledge-base/secrets/api-keys.md"
+  "/mnt/d/knowledge-base/secrets/api-key.md"
+  "/mnt/d/knowledge-base/kai/secrets/api-key"
+  "/mnt/d/knowledge-base/kai/secrets/api-key.md"
   "/mnt/d/knowledge-base/kai/secrets/api-keys"
   "/mnt/d/knowledge-base/kai/secrets/api-keys.md"
   "$REPO_ROOT/../knowledge-base/secrets/api-keys"
@@ -54,7 +64,7 @@ for line in text:
     line=line.strip()
     if not line or line.startswith('#'):
         continue
-    m=re.match(r'STITCH_API_KEY\s*[:=]\s*(.+)$', line)
+    m=re.match(r'(?:STITCH_API_KEY|SITCH_API_KEY)\s*[:=]\s*(.+)$', line)
     if m:
         print(m.group(1).strip().strip('"\''))
         break

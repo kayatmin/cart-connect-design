@@ -1,173 +1,395 @@
 Design the CartConnect mobile agent dashboard.
 
 Use this source of truth:
-# CartConnect design.md
+# CartConnect Mobile design.md
 
 ## Product
 
-CartConnect is a live shopping support experience that lets store agents help customers in real time through session-based chat and cart collaboration.
+CartConnect Mobile is the agent-side Flutter app for live shopping support. Store agents use it to sign in, watch the live session queue, accept customer sessions, chat with shoppers, edit carts, add inventory items, and move sessions toward checkout.
 
-## Primary surfaces
+## Memorable Thing
 
-1. Agent mobile app
-2. Agent web dashboard
-3. Customer session web experience
+The first read should be: this is a calm command center for high-pressure commerce moments.
 
-## Current priority
+## Target User
 
-Design and iterate the **agent mobile experience** first.
+Store support agents working on phones or small tablets while helping customers in real time. They need fast scanning, clear priority, big touch targets, and confidence that cart and chat changes landed.
 
-## Design goals
+## Project Type
 
-- modern and premium
-- high trust and calm
-- fast to scan under live support pressure
-- mobile-first
-- crisp hierarchy with minimal clutter
-- visually closer to polished Shopify-adjacent tooling than generic admin UI
+Mobile operational app with live queue management, session detail, chat, cart editing, inventory add flow, auth recovery, empty states, and network recovery states.
 
-## Brand / tone
+## Aesthetic Direction
 
-- confidence without looking corporate-heavy
-- neutral surfaces with a few strong accents
-- clean cards, generous spacing, rounded corners
-- strong status visibility for live session state
+### Direction
 
-## Target user
+Industrial/Utilitarian with premium retail restraint.
 
-Store support agents handling live pre-purchase or in-cart conversations with customers.
+The app should feel like a compact operations console, not a consumer shopping app and not a dense enterprise dashboard. The visual system should be quiet, precise, and fast to parse under live support pressure.
 
-## Jobs to support
+### Decoration Level
 
-- sign in quickly
-- see waiting and active sessions immediately
-- understand session urgency at a glance
-- accept a session fast
-- read customer context fast
-- reply clearly
-- adjust cart with minimal friction
-- move toward checkout confidently
+Intentional.
 
-## Core screens
+Use tonal surfaces, small status rails, thin dividers only where they improve scan speed, and rare high-signal accent color. Avoid decorative gradients, bubbly shapes, centered marketing layouts, stock imagery, and heavy shadows.
 
-### 1. Login
-- email
-- password
-- strong brand/title presence
-- subtle API/environment footer only in debug/dev mode
+### Mood
 
-### 2. Agent dashboard
-- current agent identity summary
-- compact KPI / status summary
-- clear grouped session list — sessions grouped by status category: **Waiting** (most prominent, amber highlight), **Active** (blue highlight), then **Completed / Expired / Declined** (subdued, gray)
-- strong visual emphasis on waiting sessions
-- preserve selected session while list refreshes
+Calm, exact, awake. Waiting sessions are allowed to feel urgent, but the app itself should never feel frantic.
 
-### 3. Session detail
-- customer identity and session state
-- primary actions: accept, decline, end
-- chat timeline
-- cart contents
-- clear subtotal / checkout state
-- controls for quantity changes and remove
+## Design Goals
 
-### 4. Chat composer state
-- reply field anchored predictably
-- send action obvious
-- distinguish customer vs agent messages visually
+- Mobile-first and practical for Flutter.
+- Strong queue triage: waiting sessions are the most visible item on the dashboard.
+- Clear selected-session continuity while the list refreshes.
+- Chat and cart can be scanned without losing session state.
+- Auth and network failures feel recoverable, not alarming.
+- Visual system should map cleanly to current backend session, chat, cart, checkout, and inventory APIs.
 
-### 5. Cart edit state
-- quantity controls
-- remove action
-- room for future discount and checkout actions
+## Core Screens
 
-### 6. Auth Expired
-- shown when backend returns 401 during an active session
-- explains the session expired calmly (not alarming)
-- single clear "Sign in again" CTA
-- maintains brand consistency with Login screen
-- minimal, single-focus layout
+### 1. Splash / Bootstrap
 
-### 7. Session Queue Empty State
-- shown when agent dashboard loads with zero sessions in queue
-- reassures the agent — this is a good state, not an error
-- includes subtle illustration/icon (subtle, not playful)
-- soft green or neutral tint to communicate "all clear"
-- no action required, just reassurance
+- Brand mark or wordmark only.
+- Small operational status line such as "Syncing agent workspace".
+- No marketing copy.
+- Background uses the base surface, not a decorative hero.
 
-### 8. API / Network Error State
-- shown when API call fails (connection error, server error, timeout)
-- brief explanation of what went wrong (connection vs server)
-- prominent "Retry" button
-- "Contact support" fallback for persistent failures
-- muted warning tones, recoverable and calm
+### 2. Login
 
-## Important states
+- Strong CartConnect identity.
+- Email and password fields.
+- Primary sign-in CTA.
+- Debug/API environment footer only for development builds.
+- Trust posture: secure, restrained, work-focused.
 
-- signed out
-- loading
-- empty session list
-- waiting session selected
-- active session selected
-- expired/ended session
-- auth expired and sign-in required again
-- API error / retry state
+### 3. Agent Dashboard
 
-## Interaction notes
+- Agent identity and availability summary.
+- Compact KPI row for waiting, active, completed, and total.
+- Session list grouped by status priority:
+  - Waiting first, with amber left rail and stronger metadata.
+  - Active second, with blue rail and clear "in progress" label.
+  - Completed, expired, and declined last, in subdued neutral treatment.
+- Preserve selected session during refresh.
+- Empty queue state should feel good, not broken.
 
-- session refresh should feel live
-- avoid jarring full-screen spinners when partial loading is enough
-- destructive actions should feel intentional
-- waiting session should stand out clearly from expired/completed items
+### 4. Session Detail
 
-## Must-keep constraints
+- Customer identity, status chip, and short session metadata at the top.
+- Primary actions: accept, decline, end.
+- Cart and chat both visible, with the active task taking more vertical space.
+- Mutation state must be local to the selected session and action.
+- Inline error callouts near the thing that failed.
 
-- must stay practical to implement in Flutter
-- should map cleanly to current backend session/chat/cart APIs
-- should not assume unavailable backend features
+### 5. Chat Focus
 
-## Stitch generation guidance
+- Chat timeline as primary content.
+- Customer messages left, agent messages right.
+- Agent messages use the primary ink surface or blue-tinted container.
+- Composer anchored to bottom with clear send affordance.
+- Small customer/cart context chip stays visible without crowding messages.
+
+### 6. Cart Edit
+
+- Cart contents as primary content.
+- Product image thumbnail, title, variant, price, quantity controls, remove action.
+- Quantity controls must have 44px minimum hit area.
+- Remove action is secondary and intentional, not visually loud.
+- Subtotal and checkout readiness are sticky or visually anchored.
+- Room for future discount and checkout actions.
+
+### 7. Inventory Add Sheet
+
+- Search field first.
+- Results show product image, title, variant, availability, and price.
+- Add action is explicit.
+- Quantity stepper should not shift layout while loading.
+- Loading and empty search states are quiet and useful.
+
+### 8. Auth Expired
+
+- Single-focus re-auth screen.
+- Headline: "Session expired" or "Sign in again".
+- Explain calmly that the agent needs to sign in again.
+- One primary CTA.
+
+### 9. Empty Queue
+
+- "All clear" posture.
+- Soft green or neutral success surface.
+- No required action.
+- Keep it compact enough that dashboard chrome remains recognizable.
+
+### 10. API / Network Error
+
+- Recoverable warning tone.
+- Explain whether connection, server, or timeout when known.
+- Primary retry button.
+- Contact support fallback.
+- Avoid technical jargon in user-facing copy.
+
+## Color
+
+### Approach
+
+Restrained. One primary ink, one active blue, one waiting amber, semantic states, and layered neutrals.
+
+### Palette
+
+- Primary ink: `#102033` - headers, primary buttons, selected bottom nav, agent-owned message bubbles.
+- Primary ink dark: `#07111F` - pressed state and high-emphasis text.
+- Active blue: `#2563EB` - active session state, links, focused controls.
+- Waiting amber: `#F2A900` - waiting sessions, queue urgency, time-sensitive badges.
+- Clear green: `#167A55` - empty queue, success, completed session signals.
+- Recoverable warning: `#8A5A00` - network retry warnings and non-destructive alerts.
+- Danger: `#B42318` - destructive confirmation and failed mutation text only.
+- Background: `#F6F7F9` - app base.
+- Surface: `#FFFFFF` - cards and panels.
+- Surface raised: `#FBFCFE` - inputs, chat composer, sticky control areas.
+- Surface muted: `#EEF1F5` - inactive tabs, disabled controls, low-emphasis groups.
+- Border soft: `#DCE2EA` - structural borders.
+- Text primary: `#111827` - main copy.
+- Text secondary: `#586174` - metadata and helper text.
+- Text tertiary: `#8A94A6` - timestamps and disabled labels.
+
+### Semantic Containers
+
+- Waiting container: `#FFF4D6` with text `#6F4700`.
+- Active container: `#E8F0FF` with text `#1D4ED8`.
+- Success container: `#E7F6EE` with text `#166D4B`.
+- Danger container: `#FDECEC` with text `#9F1D14`.
+- Warning container: `#FFF7E8` with text `#8A5A00`.
+
+### Dark Mode Strategy
+
+Dark mode is not the first target. When added, redesign surfaces rather than inverting colors. Reduce accent saturation by 10-20 percent and keep waiting amber readable without making the whole app feel hot.
+
+## Typography
+
+### Typeface Direction
+
+- Display / Screen titles: Plus Jakarta Sans, 700.
+- Body and UI: Source Sans 3, 400-600.
+- Data / timestamps / compact counts: IBM Plex Mono, 500, tabular numbers.
+- Code / debug labels: IBM Plex Mono.
+
+This avoids the generic Inter-style admin look while staying practical for Flutter and readable on small screens.
+
+### Scale
+
+- Display: 28px / 34px, weight 700.
+- Screen title: 22px / 28px, weight 700.
+- Section title: 17px / 24px, weight 700.
+- Card title: 15px / 20px, weight 700.
+- Body: 14px / 20px, weight 400.
+- Body strong: 14px / 20px, weight 600.
+- Label: 12px / 16px, weight 600.
+- Metadata: 11px / 14px, weight 500.
+- Data: 13px / 18px, weight 600, tabular numbers.
+
+### Flutter Loading
+
+Prefer bundled font assets for production. If using Google Fonts during exploration, map to:
+- Plus Jakarta Sans for titles.
+- Source Sans 3 for body/UI.
+- IBM Plex Mono for data.
+
+## Spacing
+
+### Base Unit
+
+4px.
+
+### Density
+
+Compact-comfortable. Agents need enough information on screen, but touch targets cannot feel cramped.
+
+### Scale
+
+- `2xs`: 2px
+- `xs`: 4px
+- `sm`: 8px
+- `md`: 12px
+- `lg`: 16px
+- `xl`: 24px
+- `2xl`: 32px
+- `3xl`: 48px
+
+### Touch Targets
+
+- Minimum tap target: 44px.
+- Primary button height: 52px.
+- Text input height: 52px.
+- Quantity stepper control: 40px visual height, 44px hit area.
+
+## Layout
+
+### Approach
+
+Grid-disciplined for app screens, with small editorial offsets in headers and status summaries.
+
+### Mobile Rules
+
+- Page margin: 16px.
+- Card padding: 16px.
+- Dense list item padding: 12px vertical, 14px horizontal.
+- Section gap: 20px.
+- Bottom nav: fixed, 4 items max, selected item uses filled pill.
+- Sticky composer and checkout actions use raised surface with top border.
+
+### Responsive Rules
+
+- Phones: single-column queue/detail flow with tabs or drill-in panels.
+- Large phones / small tablets: queue and selected session may sit side by side.
+- Desktop previews are secondary; mobile is the source of truth.
+
+### Radius
+
+- Tiny: 4px for rails and small indicators.
+- Small: 8px for chips and compact controls.
+- Medium: 12px for inputs and list rows.
+- Large: 16px for cards and sheets.
+- Extra large: 20px for major panels.
+- Full: 999px for pills.
+
+## Components
+
+### App Scaffold
+
+- Background `#F6F7F9`.
+- Top app bar white or transparent depending on scroll.
+- Avoid oversized hero headers inside the app.
+
+### Status Rail
+
+Use a 4px left rail on session rows:
+- Waiting: amber.
+- Active / joining: active blue.
+- Completed: clear green.
+- Expired / declined: neutral.
+
+### Session Row
+
+- Customer name or fallback ID.
+- Status chip.
+- Wait time or last activity.
+- Cart subtotal and chat count.
+- Selected state uses `#E8F0FF` background and primary ink text.
+
+### KPI Tiles
+
+- Compact row, not large cards.
+- Label, count, and small status color.
+- Waiting tile may use amber container.
+
+### Chat Bubbles
+
+- Customer: white card with soft border.
+- Agent: primary ink bubble with white text.
+- System: small centered neutral chip.
+- Timestamps use tertiary text or mono data style.
+
+### Cart Item Row
+
+- 56px product thumbnail.
+- Title, variant, price.
+- Quantity stepper aligned right.
+- Remove icon button muted by default, danger only on confirm.
+
+### Buttons
+
+- Primary: primary ink background, white text.
+- Secondary: white background, soft border, primary ink text.
+- Waiting action: amber container only when the action is truly time-sensitive.
+- Danger: danger text or danger container, never as the default dominant action.
+
+### Inputs
+
+- Filled raised surface.
+- Soft border only on focus or error.
+- Labels stay outside the input when space allows.
+
+### Error Callouts
+
+- Use warning container for retryable network issues.
+- Use danger container for failed destructive or auth actions.
+- Keep copy short and action-oriented.
+
+## Motion
+
+### Approach
+
+Minimal-functional.
+
+### Rules
+
+- State changes: 150-220ms ease-out.
+- Bottom sheets: 220-300ms ease-out.
+- Loading skeleton shimmer only where content shape is known.
+- No looping decorative motion except a small live status pulse.
+- Preserve scroll position and selected session across refresh.
+
+## Stitch Generation Guidance
 
 When generating screens from this file:
-- prefer production-looking layouts over wireframe-style output
-- bias toward a single polished visual system across all screens
-- keep components reusable across screens
-- generate mobile-sized screens first
-- produce prompts that mention live shopping support, real-time session handling, agent workflow, customer chat, and collaborative cart editing
+- Generate mobile-sized screens first.
+- Use realistic agent support content, not lorem ipsum.
+- Show live shopping support, queue triage, customer chat, collaborative cart editing, inventory add, and checkout readiness.
+- Keep the same design system across all screens.
+- Prefer production-looking layouts over wireframes.
+- Avoid purple gradients, centered marketing layouts, generic feature cards, bubbly all-purpose radius, and stock-photo-heavy designs.
+- Make waiting sessions visually louder than active and completed sessions.
+- Keep auth and network recovery calm and single-purpose.
+
+## Decisions Log
+
+| Date | Decision | Rationale |
+|------|----------|-----------|
+| 2026-04-30 | Created fresh mobile design.md for Stitch generation | The mobile app needs a direct source of truth aligned to the current Flutter surfaces and live support workflows. |
 
 Brand notes:
-# CartConnect brand notes
+# CartConnect Mobile brand notes
 
-## Visual direction
+## Visual Direction
 
-- premium but restrained
-- calm operational tooling
-- not playful consumer UI
-- not dense enterprise UI
+- calm command center for live commerce support
+- premium retail restraint, not generic admin software
+- mobile operational tool, not marketing site
+- compact, exact, and easy to scan during active customer sessions
 
-## Suggested design tokens
+## Brand System
 
-- background: soft neutral / off-white
-- surface: white or lightly tinted cards
-- primary accent: deep blue
-- success: soft green
-- warning: amber
-- danger: muted red
+- Primary identity color: deep ink `#102033`
+- Live active color: blue `#2563EB`
+- Waiting priority color: amber `#F2A900`
+- Clear/success color: green `#167A55`
+- Danger is reserved for destructive confirmation and failed actions
+- Neutrals should feel cool and clean, with `#F6F7F9` as the base surface
 
-## UI characteristics
+## Typography
 
-- rounded cards
+- Plus Jakarta Sans for screen titles and strong UI labels
+- Source Sans 3 for body and controls
+- IBM Plex Mono for compact counts, timestamps, debug labels, and tabular values
+- Do not use Inter, Roboto, Poppins, Space Grotesk, or system-ui as the primary look
+
+## UI Characteristics
+
+- 4px status rails for session priority
+- compact KPI tiles
 - large touch targets
-- readable typography hierarchy
-- quiet shadows
-- clear state chips / pills for session status
+- white and near-white surfaces over a soft neutral app background
+- selected state should be obvious without heavy shadows
+- bottom navigation may use a filled pill for the active destination
+- waiting sessions should be the loudest queue element
 
-## Session semantics
+## Screen Content Guidance
 
-- waiting: most prominent
-- active: confident / engaged
-- expired: subdued
-- completed: low emphasis
+- Use realistic customer names and retail products
+- Include cart totals, chat counts, wait time, and last activity metadata
+- Keep auth and network recovery single-purpose
+- Avoid generic dashboard filler and lorem ipsum
 
 Requirements:
 - agent summary header
