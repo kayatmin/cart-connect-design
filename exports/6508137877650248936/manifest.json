@@ -1,19 +1,25 @@
 {
   "projectId": "6508137877650248936",
-  "exportedAt": "2026-05-01T17:47:09.374Z",
-  "screenCount": 12,
+  "exportedAt": "2026-05-01T18:01:22.185Z",
+  "screenCount": 17,
   "screens": [
     {
-      "id": "80f85307ef664a959e138c7bdf286424",
-      "title": "Agent Dashboard",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzZiZDM3ZGQ5NDk1NDRlM2JhMzg1NmU1ZjljODYwMmFiEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiu52OXZs40mYPt2glkwp_ckAZzxkG67b0XeyenyhViw482kgqv9VEo_JGl6T2o0VVyuSQvpYdiJh5VFMyTbbHc2GGQ7U65zS7AXTeJW-jwhncBopHqGrkpzI9t8Bl68ytjTP7dIV2a9Bl77PKrYbsDZRU2Rq0-sTz-LaBk7_fj14wIBlBGvnrG5gXq66Ee8DcZglADmOufpiAFS3pP7vy1bgje-Xt16IcBKu9CVzpI0zw5gc-N3aLwKg"
+      "id": "97cfbe1a46374737a4a543a9e7c70869",
+      "title": "Splash / Bootstrap",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFkZmJhOGIyMjBlMjRkZWI5NjcxNWM0OTkyNGI4NGM2EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujZOrUw4c8hQE-z_f3tlfRrBt7xjB5B2aHmNImjiUik13sjoX1rhpZcGgbKo54kMAqO4_PbvUFe4pURnlQigy20XezBj47XwVRW8glV8rnyM9fmO2tnqzOM-piuo60yXHLq9iNresdDqnrOg8QPIzTwYuApv3h_5-x02XvV0WBjKkwzXLMX_POelai1w-0G5Mu0sY6Lrx2q4BjT0UFd0yywtc0VmDkXqQ6fxBo1ZGBX4q0pHUlzpELjrUc"
     },
     {
-      "id": "d2e008b5c44e4bee807f0e90477c08b1",
-      "title": "Empty Queue - All Clear",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2JiOWZmNDRlYjQ5MzRkNWZiNGQ0OTc5ZGQ1Njk3OTNhEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhChhFlMPaMnQRgXpw_0q-gCCxasWX0BCP6uxMX2CwnhyhQkQFO7TerbyF-Oclea92l3IQ6veC5iM28VTHkEswA0QdMPTiKpKcCpa0rLmLwRe14XSsVzUN6k9dzQgJOFwhzNWNWRr55pnmjGpomar8MEkM0TD144r-wSMIao6kN5YiAOYSihlOW9nuLnJrWUSENAkVyufQNdJ0mZ_mtezBUGcdfdwn0YuNXrot9PhHOatoXuzKWnKkjj_o"
+      "id": "6af9523026534d9d8f6de1ea14c6415d",
+      "title": "Auth Expired",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzNhMjIzNWE0M2E5OTQ0MThiNTQ4MDI4YzBlMDUxMDc1EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugPl1YU5WCw75AhmU7UTZ9ioPLlzFIaA_Fog5D2VqpCnMeWI-XhRDEwOyvJcGm7_9MZdDi4mCNWJo1QxO21iTO2XqMU6Xl8mm0h4Jk0qmSY_Z_nCx_BBuFXmxyQREYQBuRZcvjNlNkZdpofIPhfmMFfV6m2fEWqVUt3ZRXaagvni4zBnBJ3ZPbzyFT35zcpGSI72ZBE9g7td7Qxl3LxZE4G0XowWVZ1rxFfbjRDFfpOaGGNvU1g0-rkFA"
+    },
+    {
+      "id": "6f613a7fa1a04d90b83e8d6b894ac005",
+      "title": "Inventory Add Sheet",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzdkMTkzYTY0NGM0MjQxNmE4ZDRmNWJlZTQwMjBjYTg4EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujVmYuk0bHAO5PE3ooFi3Mbba6do7-nZwmB35D44oDEFbffeOOogZqmZ93r-ogX3QpaRoAZdcEgf9O2vz6iqtdUUPI8yhofyj2sfvtzu7xKno8uVb1N3jEQWOTgzucXmfiaLO1kOc0bCq44u-SS0QPjLwJUomoUNRFBMkGO1nScsGlY_piEwXcjXShcehgPNFvg_X2fr-LSVTVKBKwePkVUGyN_j2jfBj_8JJDvQDJ08rGbcGWcrHX0pG0"
     },
     {
       "id": "43e7215c996a4d7db66ca038fbd36dfc",
@@ -22,10 +28,40 @@
       "imageUrl": ""
     },
     {
-      "id": "97cfbe1a46374737a4a543a9e7c70869",
-      "title": "Splash / Bootstrap",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFkZmJhOGIyMjBlMjRkZWI5NjcxNWM0OTkyNGI4NGM2EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujZOrUw4c8hQE-z_f3tlfRrBt7xjB5B2aHmNImjiUik13sjoX1rhpZcGgbKo54kMAqO4_PbvUFe4pURnlQigy20XezBj47XwVRW8glV8rnyM9fmO2tnqzOM-piuo60yXHLq9iNresdDqnrOg8QPIzTwYuApv3h_5-x02XvV0WBjKkwzXLMX_POelai1w-0G5Mu0sY6Lrx2q4BjT0UFd0yywtc0VmDkXqQ6fxBo1ZGBX4q0pHUlzpELjrUc"
+      "id": "80f85307ef664a959e138c7bdf286424",
+      "title": "Agent Dashboard",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzZiZDM3ZGQ5NDk1NDRlM2JhMzg1NmU1ZjljODYwMmFiEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiu52OXZs40mYPt2glkwp_ckAZzxkG67b0XeyenyhViw482kgqv9VEo_JGl6T2o0VVyuSQvpYdiJh5VFMyTbbHc2GGQ7U65zS7AXTeJW-jwhncBopHqGrkpzI9t8Bl68ytjTP7dIV2a9Bl77PKrYbsDZRU2Rq0-sTz-LaBk7_fj14wIBlBGvnrG5gXq66Ee8DcZglADmOufpiAFS3pP7vy1bgje-Xt16IcBKu9CVzpI0zw5gc-N3aLwKg"
+    },
+    {
+      "id": "20a91724f3b94222970fbbd164c735ed",
+      "title": "Session Detail - Julian R.",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzU3NDBhZTgwMWE0OTQ3MGFiODlhNjA2YTA5YjI2YTE1EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhvuaV7A0Wn7TS-W_Mml07JQwmxdN-PlBYzSgtuq5QTTVyjHfb78w9hU00AliuCmf0Lf3ucxikAAtxUHmOIDC3pgXwntCCZCmKcwI-XLlw3NejY5R_OMhCobjxOcjuCDdibF4qhiZo7kS3INZkavTwhSa8ayaC10vbAa_PvQSEReconS6dawHeBWRHE7cO_e4JqszZbY3JP18boN-g9j4PIKTX5cEh0h7nlBRbXaw07wiTe_bowaaHeZfs"
+    },
+    {
+      "id": "072b53ea32a04bf6a9895ebe1e4ec958",
+      "title": "API / Network Error",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2NjNTJjNjZkMDg3YzRkM2JiNzllMzM4MGI3ZDFiYjQxEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiKJQupJH2mXpjtSRHXVvJNLp4rsrDpA5l2gF_VQIFVrcDv5hd-IFKY1Fx_VEKIMFzhmNNMzgUkpNwWknKRUjO4qx_0xZJmL_Jey0PFUTcoaWu9YJaLjLcpjrUdZGviu0JZ_ZBerNgU26b5iw103NEo5R5miTlI2Bqf6uUtR2NKT0LARcLfYc9rBlAAj_VcTKgA4wtu-HEsIcutgkXsaytvYit6vN5nC6qW6UzCAmeQFdKhSLTkMARqdUk"
+    },
+    {
+      "id": "468ba296daa449cab7931cb25a60b8cc",
+      "title": "Login - CartConnect Premium",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzkwMTgwM2E4NjJlYzQwMzBiODIzMDA2YTM3NDUyNzFkEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujZ9DxAE6f3SCi9GgjVvjLvdfO1tfvtRh3GlvhAuRbjQfRp_kbTwG6tv-8Kvp0vYZDoR21GGlh8IH7AbbJahMIqbEQAXKrDjRJgmiYup1ypVQLC922oXPVOAp_Q63u4t15Wmjgv-5TLLZk7HMuZwolksMKzInWpBz80gtrVXUKmiEt87LkIKCLioM6R8eESR3a1mws0Wl-wcNgOG9hNkh1WihwVBN_51CPq077mmND_jdRFhtbEBZWdsg"
+    },
+    {
+      "id": "26c98a232f814c0d8a15ab34e2a0ec2e",
+      "title": "Cart Edit - Julian R.",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFiNzQxNTNmNzIxOTQ4ZTQ4YjZlODY3MGY3N2I1ZDUxEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uinki-d9xJl0UJ98dTWWTlhgWGpKM1lvsX6IZY6nD3hlx44iBZorCiq84RLZLeE28k7sqioR9PtOy-GZXSvs7jm2lUZUIKhA8yPPT6EMfXifwudZ7YOEjCcbd5TUMSRve1tCJJ3Hrfqo7NdunlXhqfmJpxLN_OFuxDRa3DkWgnXfSO7Y8A9N7bXIB4OB_9-303DxYP7Ii4qdWsUu6VimkOlKU4n7oQtmJ4_AVNaxZjxRdqvk0nsJZfXTHU"
+    },
+    {
+      "id": "d2e008b5c44e4bee807f0e90477c08b1",
+      "title": "Empty Queue - All Clear",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2JiOWZmNDRlYjQ5MzRkNWZiNGQ0OTc5ZGQ1Njk3OTNhEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhChhFlMPaMnQRgXpw_0q-gCCxasWX0BCP6uxMX2CwnhyhQkQFO7TerbyF-Oclea92l3IQ6veC5iM28VTHkEswA0QdMPTiKpKcCpa0rLmLwRe14XSsVzUN6k9dzQgJOFwhzNWNWRr55pnmjGpomar8MEkM0TD144r-wSMIao6kN5YiAOYSihlOW9nuLnJrWUSENAkVyufQNdJ0mZ_mtezBUGcdfdwn0YuNXrot9PhHOatoXuzKWnKkjj_o"
     },
     {
       "id": "e7ad97141d254aa4a45daf3c504e1acc",
@@ -40,40 +76,46 @@
       "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiviXp_wHsBIb1gCc9gnOlvCz465Tp37kHzhRKnfojabzWwO_gv0B4DSUV0sWx2H1XpE8IQ7_GmLNGLwpEz3gqSTpmD6u09b4UyY1n71DlNC_314D2vmvpS2gtrWCzJeuuOFHbXMzQB60jgssqrAdd9xtKWSO_4uFVIPa7rl9PQ1bXm_iQ3ZNGj8nYEPYk6Oz7g0jUw9jbAr0hgGsQk4jBnOesFqRsy1e93P3GIk6ei0_AzONcJpRcQlko"
     },
     {
-      "id": "6af9523026534d9d8f6de1ea14c6415d",
-      "title": "Auth Expired",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzNhMjIzNWE0M2E5OTQ0MThiNTQ4MDI4YzBlMDUxMDc1EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugPl1YU5WCw75AhmU7UTZ9ioPLlzFIaA_Fog5D2VqpCnMeWI-XhRDEwOyvJcGm7_9MZdDi4mCNWJo1QxO21iTO2XqMU6Xl8mm0h4Jk0qmSY_Z_nCx_BBuFXmxyQREYQBuRZcvjNlNkZdpofIPhfmMFfV6m2fEWqVUt3ZRXaagvni4zBnBJ3ZPbzyFT35zcpGSI72ZBE9g7td7Qxl3LxZE4G0XowWVZ1rxFfbjRDFfpOaGGNvU1g0-rkFA"
+      "id": "ad0697a63669431a925dbab3bc791fb1",
+      "title": "Splash / Bootstrap",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA2OGY0NjNiODFlNzQyOTViYWVmMmE3NDcyNTY0MzkzEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugNfaqu3NqLsLA0lKfwUrEzIM7GF71f2sujeEy7G4kewmzSHhH3XiGUmfMmZxgyUSp6RTJIPJN4cK1-GAs0gNQvPNagBv9Wxcod713s4PuRFcqWl_K23gfcL6SCQZJxVOQ-yI6Lrt2G6ZFfhV3ZBxiBfGeUc9O_HmabvdaiyRaPBT0cMWieyw09s4iH0MMuIjAYdihi9-H2o6xIpfE3jhVr-ZgxFOObEll7g760GSbM-AWjw8VpWKgYiA",
+      "latestAddition": true
     },
     {
-      "id": "26c98a232f814c0d8a15ab34e2a0ec2e",
+      "id": "4d6a84f6f8ef42e5bca6069a641201d7",
+      "title": "Chat Focus - Julian R.",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQzYWQwY2ZiMjBmNjQzMzhhZTI0MDRkMmY2NDYyZWE3EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhxB5DS-JYgO-Z-k6aRwLoY7hY-PFpV-SmyXXITliT5thSiGStYC97qREW8047_0WJBAudQwSIgBltxW-Aco1gJhRG9AT3U0Pq916Vo1vRXL4xd3chHT54vfw_fFCO5dFF5dpR2zj_k9Xl_6vyqUXHVyYglfYNbDCjkvpt0jg0NKLOeA1bPtgaFgu2Ao5l0fTmGEIm83YWyIobL-KYQpLDVlbEwS_pij-_Xoy83CjIq2a3k3eD74Pjvkkw",
+      "latestAddition": true
+    },
+    {
+      "id": "90b6a234a3034bea9260a31c3ac27c5b",
       "title": "Cart Edit - Julian R.",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFiNzQxNTNmNzIxOTQ4ZTQ4YjZlODY3MGY3N2I1ZDUxEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uinki-d9xJl0UJ98dTWWTlhgWGpKM1lvsX6IZY6nD3hlx44iBZorCiq84RLZLeE28k7sqioR9PtOy-GZXSvs7jm2lUZUIKhA8yPPT6EMfXifwudZ7YOEjCcbd5TUMSRve1tCJJ3Hrfqo7NdunlXhqfmJpxLN_OFuxDRa3DkWgnXfSO7Y8A9N7bXIB4OB_9-303DxYP7Ii4qdWsUu6VimkOlKU4n7oQtmJ4_AVNaxZjxRdqvk0nsJZfXTHU"
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzM0MDAyNDBkOTJkNDQ2ZWQ4YTBiYzBhZDEyMTM3NTM1EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugBEtdPKrJ2e5VIkBKl4GRaYs_GMaNERvXZBQz__Gy_i881unGTPRoIDsTxEvOMdgR0OklVKqEuf_j-QvOQLHvHS6GAkLjlibD0fvR1iHp1c2JraLXQJWtyEATdPJNkndQO21sqbh4ht5dcEVyQ9JWG6jbLF5rJqM4sLVIRg2bZZ8nfixfL5t5P08W_Y_-Gew_-xKAOjnK7U8F6e9l1fcvDVIsjijAf2q2_BP9mGqbx48-g7qQovnKEHw",
+      "latestAddition": true
     },
     {
-      "id": "072b53ea32a04bf6a9895ebe1e4ec958",
-      "title": "API / Network Error",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2NjNTJjNjZkMDg3YzRkM2JiNzllMzM4MGI3ZDFiYjQxEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiKJQupJH2mXpjtSRHXVvJNLp4rsrDpA5l2gF_VQIFVrcDv5hd-IFKY1Fx_VEKIMFzhmNNMzgUkpNwWknKRUjO4qx_0xZJmL_Jey0PFUTcoaWu9YJaLjLcpjrUdZGviu0JZ_ZBerNgU26b5iw103NEo5R5miTlI2Bqf6uUtR2NKT0LARcLfYc9rBlAAj_VcTKgA4wtu-HEsIcutgkXsaytvYit6vN5nC6qW6UzCAmeQFdKhSLTkMARqdUk"
-    },
-    {
-      "id": "6f613a7fa1a04d90b83e8d6b894ac005",
+      "id": "031396d2736341a3b5383106f5e51874",
       "title": "Inventory Add Sheet",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzdkMTkzYTY0NGM0MjQxNmE4ZDRmNWJlZTQwMjBjYTg4EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujVmYuk0bHAO5PE3ooFi3Mbba6do7-nZwmB35D44oDEFbffeOOogZqmZ93r-ogX3QpaRoAZdcEgf9O2vz6iqtdUUPI8yhofyj2sfvtzu7xKno8uVb1N3jEQWOTgzucXmfiaLO1kOc0bCq44u-SS0QPjLwJUomoUNRFBMkGO1nScsGlY_piEwXcjXShcehgPNFvg_X2fr-LSVTVKBKwePkVUGyN_j2jfBj_8JJDvQDJ08rGbcGWcrHX0pG0"
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQ2MjRjNjk2YjU2YzQ0NWI4NTVmZDY2YWE2Y2UzZGVkEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujcwk2JRI97J4qJHNnDl5lDFABnWSKpo4MUoAYHhd-3MPb75vgSXtxBfcv6_UbwyeIvj_0PF0Xfzs_UGlZheXOMOCre0SyYCWO3FUg1YBy3cWyqONmRCD3ilbcR0mVTGUnI8vZaPtWeCUlrL-YVFtSu1GmzRcG1PsrscQI76DLzssCKc8jHgcD6uEv17hCl420It4y67j15HKgfzSYtZE4obT7_WWXc7afOvlkBgisfvVVp2wLMbo4PCA",
+      "latestAddition": true
     },
     {
-      "id": "468ba296daa449cab7931cb25a60b8cc",
-      "title": "Login - CartConnect Premium",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzkwMTgwM2E4NjJlYzQwMzBiODIzMDA2YTM3NDUyNzFkEgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujZ9DxAE6f3SCi9GgjVvjLvdfO1tfvtRh3GlvhAuRbjQfRp_kbTwG6tv-8Kvp0vYZDoR21GGlh8IH7AbbJahMIqbEQAXKrDjRJgmiYup1ypVQLC922oXPVOAp_Q63u4t15Wmjgv-5TLLZk7HMuZwolksMKzInWpBz80gtrVXUKmiEt87LkIKCLioM6R8eESR3a1mws0Wl-wcNgOG9hNkh1WihwVBN_51CPq077mmND_jdRFhtbEBZWdsg"
-    },
-    {
-      "id": "20a91724f3b94222970fbbd164c735ed",
-      "title": "Session Detail - Julian R.",
-      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzU3NDBhZTgwMWE0OTQ3MGFiODlhNjA2YTA5YjI2YTE1EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
-      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhvuaV7A0Wn7TS-W_Mml07JQwmxdN-PlBYzSgtuq5QTTVyjHfb78w9hU00AliuCmf0Lf3ucxikAAtxUHmOIDC3pgXwntCCZCmKcwI-XLlw3NejY5R_OMhCobjxOcjuCDdibF4qhiZo7kS3INZkavTwhSa8ayaC10vbAa_PvQSEReconS6dawHeBWRHE7cO_e4JqszZbY3JP18boN-g9j4PIKTX5cEh0h7nlBRbXaw07wiTe_bowaaHeZfs"
+      "id": "0c5b8bf64bd74c6ea4ccb33a936f3489",
+      "title": "Splash Screen",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2UxYjliNGYyNTliMDRkMjY5Y2RkYjQwMmRjNjU5ZjI3EgsSBxCjiOj-8wkYAZIBIwoKcHJvamVjdF9pZBIVQhM2NTA4MTM3ODc3NjUwMjQ4OTM2&filename=&opi=96797242",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/ADBb0uguQaxlTvrbkJZDrNuwlNgkQ6qctsUCjkx1w3Z6riqYZ1_0Dy5G4nU6Gi3hqk9jFMynCf88zm5gdju1DnCFz7hiNVlWuA2otkN6H0tppa8LvAsj6R4BRVz-EJXaF5mSlqKoBuVbsJ15fURJAC5ZLjOeBFGnVkniHtkcoknuje-42z55tNw9HAe-olGL6naMx7KuyKeTGWiDn_bY0WXdzo__0tYLDm8Ap6M6WNuzs_8LCXAIF-YxTk1AMHk",
+      "latestAddition": true
     }
+  ],
+  "latestAdditions": [
+    "ad0697a63669431a925dbab3bc791fb1",
+    "4d6a84f6f8ef42e5bca6069a641201d7",
+    "90b6a234a3034bea9260a31c3ac27c5b",
+    "031396d2736341a3b5383106f5e51874",
+    "0c5b8bf64bd74c6ea4ccb33a936f3489"
   ]
 }

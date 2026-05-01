@@ -1,0 +1,178 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "waiting-amber": "#F2A900",
+            "tertiary-fixed": "#ffddb9",
+            "primary": "#000714",
+            "surface-container-highest": "#e4e2e4",
+            "on-tertiary-container": "#a0815f",
+            "container-waiting": "#FFF4D6",
+            "inverse-primary": "#b8c8e1",
+            "recoverable-warning": "#8A5A00",
+            "container-success": "#E7F6EE",
+            "inverse-on-surface": "#f2f0f2",
+            "primary-container": "#102033",
+            "on-error": "#ffffff",
+            "surface-muted": "#EEF1F5",
+            "secondary": "#0051d5",
+            "secondary-fixed": "#dbe1ff",
+            "clear-green": "#167A55",
+            "text-secondary": "#586174",
+            "secondary-fixed-dim": "#b4c5ff",
+            "container-warning": "#FFF7E8",
+            "surface-container": "#efedef",
+            "surface-container-high": "#eae7e9",
+            "active-blue": "#2563EB",
+            "on-secondary-fixed": "#00174b",
+            "error": "#ba1a1a",
+            "secondary-container": "#316bf3",
+            "container-active": "#E8F0FF",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#b8c8e1",
+            "on-background": "#1b1b1d",
+            "on-tertiary-fixed-variant": "#5a4225",
+            "tertiary-container": "#2e1b03",
+            "text-primary": "#111827",
+            "outline-variant": "#c4c6cd",
+            "background": "#F6F7F9",
+            "surface": "#FFFFFF",
+            "inverse-surface": "#303032",
+            "on-tertiary-fixed": "#2a1801",
+            "text-tertiary": "#8A94A6",
+            "on-surface-variant": "#44474c",
+            "border-soft": "#DCE2EA",
+            "surface-dim": "#dbd9db",
+            "tertiary": "#0d0500",
+            "on-secondary-fixed-variant": "#003ea8",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#1b1b1d",
+            "surface-raised": "#FBFCFE",
+            "container-danger": "#FDECEC",
+            "on-primary-fixed-variant": "#39485d",
+            "on-primary-fixed": "#0c1c2f",
+            "surface-bright": "#fbf9fa",
+            "primary-ink-dark": "#07111F",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#fefcff",
+            "surface-variant": "#e4e2e4",
+            "outline": "#74777d",
+            "primary-ink": "#102033",
+            "surface-container-low": "#f5f3f5",
+            "danger": "#B42318",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "surface-tint": "#505f75",
+            "primary-fixed": "#d4e4fe",
+            "tertiary-fixed-dim": "#e4c09a",
+            "on-primary-container": "#78889f"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "2xl": "32px",
+            "md": "12px",
+            "2xs": "2px",
+            "sm": "8px",
+            "xs": "4px",
+            "lg": "16px",
+            "xl": "24px",
+            "3xl": "48px"
+          },
+          "fontFamily": {
+            "metadata": ["Source Sans 3"],
+            "body": ["Source Sans 3"],
+            "label": ["Source Sans 3"],
+            "data": ["IBM Plex Mono"],
+            "card-title": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"],
+            "body-strong": ["Source Sans 3"],
+            "screen-title": ["Plus Jakarta Sans"],
+            "section-title": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "metadata": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+            "body": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+            "data": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "card-title": ["15px", {"lineHeight": "20px", "fontWeight": "700"}],
+            "display": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+            "body-strong": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "screen-title": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+            "section-title": ["17px", {"lineHeight": "24px", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #F6F7F9;
+    }
+    .loading-bar-inner {
+      width: 45%;
+      background-color: #102033;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex items-center justify-center min-h-screen">
+<main class="relative w-full max-w-sm flex flex-col items-center justify-center px-lg space-y-xl">
+<!-- Wordmark Identity Section -->
+<div class="flex flex-col items-center space-y-md">
+<div class="flex items-center space-x-2">
+<div class="w-10 h-10 bg-primary-ink flex items-center justify-center rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-white text-2xl" data-icon="sync_alt">sync_alt</span>
+</div>
+</div>
+<!-- Casing Integrity: CartConnect -->
+<h1 class="font-display text-display text-primary-ink tracking-tighter">
+        CartConnect
+      </h1>
+</div>
+<!-- Status & Operational Logic -->
+<div class="w-full max-w-[240px] flex flex-col items-center space-y-md">
+<!-- Operational Status Line -->
+<p class="font-metadata text-metadata text-text-secondary tracking-wide uppercase">
+        Syncing agent workspace...
+      </p>
+<!-- Minimalist Loading Indicator -->
+<div class="w-full h-[3px] bg-border-soft rounded-full overflow-hidden">
+<div class="loading-bar-inner h-full transition-all duration-700 ease-in-out"></div>
+</div>
+</div>
+<!-- Environment Context Footer (Stationary) -->
+<div class="absolute bottom-12 flex flex-col items-center space-y-xs opacity-40">
+<div class="flex items-center space-x-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="security">security</span>
+<span class="font-metadata text-metadata uppercase tracking-widest text-primary-ink">Encrypted Console</span>
+</div>
+<span class="font-data text-[10px] text-text-tertiary">v2.4.0-PRO-MOBILE</span>
+</div>
+</main>
+<!-- Background Texture Overlay -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkwoK4XtHRthw8i44zkAuFBWel-pTt_3K0E5n7ZftUh5yDfUfDykITrKcnLxxgcgoOydUdb38dWeqtUJVew8giCzC1EgMvqM3w_A_iXZsjrLs8R0lmc-gM1GLSOUSzuAtlY6MU-TClNksZfUmSkcb_IH1q_mSSjlePORU7KqeWCSJ4oSVNU2c_5fwpF9muuw6Na6fgO8kDPNuuZzRgOp-2GLOZ_P1TpWIfV0DDiqXHK1m3mn5RS1NW3dngB5MK9tv1nUOnFMyrnA4')"></div>
+<!-- Decorative Status Rail (Industrial Design Signature) -->
+<div class="fixed top-0 left-0 w-1 h-full bg-active-blue"></div>
+</body></html>

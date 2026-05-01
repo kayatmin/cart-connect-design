@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9fb;
+        }
+        .chat-container {
+            height: calc(100vh - 56px - 64px - 80px); /* Adjusting for Header, Nav, and Composer */
+            overflow-y: auto;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#003ea8",
+                      "surface-container-low": "#f2f4f6",
+                      "primary-fixed": "#d4e4fe",
+                      "surface-dim": "#d9dadc",
+                      "on-tertiary-fixed": "#002113",
+                      "primary-fixed-dim": "#b8c8e1",
+                      "background": "#f8f9fb",
+                      "tertiary": "#000904",
+                      "error-container": "#ffdad6",
+                      "primary": "#000714",
+                      "surface": "#f8f9fb",
+                      "secondary": "#0051d5",
+                      "primary-container": "#102033",
+                      "inverse-surface": "#2e3132",
+                      "surface-container-highest": "#e1e2e4",
+                      "surface-variant": "#e1e2e4",
+                      "surface-container-high": "#e7e8ea",
+                      "secondary-fixed": "#dbe1ff",
+                      "surface-container": "#edeef0",
+                      "surface-bright": "#f8f9fb",
+                      "outline": "#74777d",
+                      "on-surface": "#191c1e",
+                      "secondary-container": "#316bf3",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#7ed8ac",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#191c1e",
+                      "outline-variant": "#c4c6cd",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#002516",
+                      "surface-tint": "#505f75",
+                      "on-primary-container": "#78889f",
+                      "on-secondary-container": "#fefcff",
+                      "inverse-primary": "#b8c8e1",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#44474c",
+                      "on-primary-fixed": "#0c1c2f",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#b4c5ff",
+                      "on-primary-fixed-variant": "#39485d",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "tertiary-fixed": "#9af5c7",
+                      "inverse-on-surface": "#f0f1f3",
+                      "on-secondary-fixed": "#00174b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "touch-target-min": "2.75rem",
+                      "stack-gap": "0.75rem",
+                      "section-padding": "1.5rem",
+                      "container-margin": "1rem",
+                      "inline-gap": "0.5rem"
+              },
+              "fontFamily": {
+                      "label-caps": ["Space Grotesk"],
+                      "h2": ["Plus Jakarta Sans"],
+                      "data-mono": ["Space Grotesk"],
+                      "h1": ["Plus Jakarta Sans"],
+                      "body-sm": ["Public Sans"],
+                      "body-md": ["Public Sans"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h2": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "data-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background selection:bg-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-14 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<button class="active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-50" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] text-base font-bold tracking-tight text-slate-900 dark:text-slate-50">Active Session</h1>
+</div>
+<button class="active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-50" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<!-- Content Area -->
+<main class="pt-14 pb-32">
+<!-- Session Header -->
+<div class="px-container-margin py-4 bg-surface-container-lowest border-b border-outline-variant flex items-center justify-between sticky top-14 z-40">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center border border-outline-variant overflow-hidden">
+<img alt="Julian R." class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged man with a friendly expression, wearing a clean white shirt in a brightly lit studio. The lighting is high-key and soft, fitting a premium corporate aesthetic. The background is a minimalist light gray, creating a polished and trustworthy persona for a high-end customer service application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALjpZ5SplkqlFLqrokk5Bnbde6kfhxasfRUF9tJ_Okr84-nnVKcs5tZvl4qc-qA2i31cr7-qKz_W-oapA0wlLTHtNTQYYJmLEUrDLaCjTZ-IYmuXj8y952h2MixPIFWSHjO3Dixn0Pop7crx74iq9a5HdiiCEMn-6csKIcboOhWhPTV5TRAr4ge4FfFKtPKKnntXQ-yaBD-jlrqE-Yj3NU8FlVe3AmxD0URBXjBSwtClLp88fRgP4LaaE4TQijer98fRLSQIMIW6c"/>
+</div>
+<div>
+<h2 class="font-h2 text-h2 text-on-surface">Julian R.</h2>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caps text-[10px]">
+                            ACTIVE
+                        </span>
+<span class="font-data-mono text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+                            4:12
+                        </span>
+</div>
+</div>
+</div>
+<button class="flex items-center justify-center w-touch-target-min h-touch-target-min rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="phone_in_talk">phone_in_talk</span>
+</button>
+</div>
+<!-- Cart Context Bar -->
+<div class="mx-container-margin mt-3 mb-6 p-3 bg-secondary-container text-on-secondary-container rounded-xl flex items-center justify-between shadow-sm border border-secondary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="shopping_cart">shopping_cart</span>
+<p class="font-label-caps text-body-sm">2 Items in Cart • $142.50</p>
+</div>
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</div>
+<!-- Chat Timeline -->
+<div class="px-container-margin space-y-stack-gap">
+<!-- Customer Message -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="p-4 bg-white border border-outline-variant rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm">
+<p class="font-body-md text-on-surface">Hello! I'm looking for high-quality headphones and a reliable USB-C cable for my laptop. Any recommendations?</p>
+</div>
+<span class="mt-1 font-data-mono text-[10px] text-outline px-1">14:01</span>
+</div>
+<!-- Agent Message -->
+<div class="flex flex-col items-end ml-auto max-w-[85%]">
+<div class="p-4 bg-primary-container text-on-primary-container rounded-tl-xl rounded-bl-xl rounded-br-xl shadow-sm">
+<p class="font-body-md text-on-primary">Of course, Julian! I've added our top-rated Premium Wireless Headphones and a reinforced USB-C cable to your cart. They are both highly durable and great for daily use.</p>
+</div>
+<span class="mt-1 font-data-mono text-[10px] text-outline px-1">14:02</span>
+</div>
+<!-- Suggestion Chip -->
+<div class="flex justify-center py-2">
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+<span class="px-3 py-1.5 bg-surface-container-high border border-outline-variant rounded-full font-label-caps text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="add">add</span>
+                        Suggest Alternative
+                    </span>
+<span class="px-3 py-1.5 bg-surface-container-high border border-outline-variant rounded-full font-label-caps text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="percent">percent</span>
+                        Send Offer
+                    </span>
+</div>
+</div>
+<!-- Customer Message -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="p-4 bg-white border border-outline-variant rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm">
+<p class="font-body-md text-on-surface">That looks great. Can you check if the headphones have noise cancellation?</p>
+</div>
+<span class="mt-1 font-data-mono text-[10px] text-outline px-1">14:03</span>
+</div>
+</div>
+</main>
+<!-- Composer -->
+<div class="fixed bottom-16 left-0 w-full p-4 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-40">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline" data-icon="attach_file">attach_file</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full h-11 px-4 bg-surface-container-low border border-outline-variant rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary font-body-md text-on-surface" placeholder="Type a message..." type="text"/>
+</div>
+<button class="w-11 h-11 flex items-center justify-center bg-secondary text-white rounded-xl active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-white dark:bg-slate-900 px-2 pb-safe border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Sessions</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Inventory</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</div>
+</nav>
+</body></html>

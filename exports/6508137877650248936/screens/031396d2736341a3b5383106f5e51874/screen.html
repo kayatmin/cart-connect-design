@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#b8c8e1",
+                    "outline-variant": "#c4c6cd",
+                    "primary": "#000714",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffddb9",
+                    "surface-dim": "#dbd9db",
+                    "inverse-primary": "#b8c8e1",
+                    "inverse-on-surface": "#f2f0f2",
+                    "surface": "#fbf9fa",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#00174b",
+                    "surface-container-high": "#eae7e9",
+                    "surface-tint": "#505f75",
+                    "tertiary-fixed-dim": "#e4c09a",
+                    "surface-container": "#efedef",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#316bf3",
+                    "tertiary": "#0d0500",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#44474c",
+                    "on-tertiary-fixed": "#2a1801",
+                    "primary-container": "#102033",
+                    "on-surface": "#1b1b1d",
+                    "on-background": "#1b1b1d",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#d4e4fe",
+                    "on-primary-container": "#78889f",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#303032",
+                    "on-primary-fixed-variant": "#39485d",
+                    "on-tertiary-container": "#a0815f",
+                    "background": "#fbf9fa",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#fefcff",
+                    "surface-container-highest": "#e4e2e4",
+                    "secondary": "#0051d5",
+                    "on-tertiary-fixed-variant": "#5a4225",
+                    "tertiary-container": "#2e1b03",
+                    "outline": "#74777d",
+                    "surface-bright": "#fbf9fa",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "surface-container-low": "#f5f3f5",
+                    "on-primary-fixed": "#0c1c2f",
+                    "surface-variant": "#e4e2e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "container-margin": "16px",
+                    "gutter": "12px",
+                    "sm": "8px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "xl": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Work Sans"],
+                    "data-lg": ["IBM Plex Mono"],
+                    "data-sm": ["IBM Plex Mono"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "h3": ["Plus Jakarta Sans"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "label-caps": ["Work Sans"],
+                    "body-lg": ["Work Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "data-lg": ["16px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "data-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "h2": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h3": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "h1": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background selection:bg-secondary-fixed">
+<!-- Shared TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-lg hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-50" data-icon="menu">menu</span>
+</button>
+<h1 class="font-h2 text-h2 text-slate-900 dark:text-slate-50 uppercase tracking-widest text-lg font-black">Inventory Catalog</h1>
+</div>
+<button class="p-2 rounded-lg hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-50" data-icon="search">search</span>
+</button>
+</header>
+<main class="pt-20 pb-40 px-4 max-w-2xl mx-auto space-y-lg">
+<!-- Search Section -->
+<section class="sticky top-20 z-40">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all font-body-md text-on-surface shadow-sm" placeholder="Search inventory..." type="text"/>
+</div>
+</section>
+<!-- Inventory List -->
+<div class="space-y-sm">
+<!-- Product Card 1: Added Item with Stepper -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex gap-4 items-center shadow-[0_4px_12px_rgba(16,32,51,0.05)]">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Acoustic Pro Gen 2" class="w-full h-full object-cover" data-alt="A close-up studio shot of professional over-ear headphones with a matte black finish, set against a clean white background. The lighting is crisp and soft, highlighting the premium texture of the materials. The overall aesthetic is industrial and minimalist, reflecting a high-end retail interface with professional clarity and modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd0QkOIy_3aBP735MXYN6ZKUFJz3C1pAutKKZLZ5upU1TWnEMDUhJzbIi-GYp1dYiEitCZFlkVGfLrfjFaLwELJrA7a7Xawd5uni2Kw7n2opjIHLeOE-svxXCOVUFvA7kXHZ6PXb5NofnIMLo8Mq1IpXMxs5oaVCTLmBfmCXR92L2ppSNjc5R0XKDZ6sEzNJxWxo3s5N8_J3zwIedzr_6VPazHPcWSCE0X_NMBrADsH6LbKMbzdy7zcb_qJaoN-4-oquzmcluYDnQ"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-primary truncate">Acoustic Pro Gen 2</h3>
+<p class="font-body-md text-on-surface-variant">Space Grey</p>
+</div>
+<span class="font-data-lg text-data-lg text-primary">$349.00</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+<span class="font-label-caps text-label-caps text-[#10B981]">45 In Stock</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low border border-outline-variant rounded-lg h-10 px-1">
+<button class="p-1 text-primary hover:bg-surface-variant rounded transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="remove">remove</span>
+</button>
+<span class="w-8 text-center font-data-sm text-data-sm">01</span>
+<button class="p-1 text-primary hover:bg-surface-variant rounded transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2: Simple Add -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex gap-4 items-center">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Logic Trackpad" class="w-full h-full object-cover" data-alt="A sleek, metallic silver digital trackpad resting on a pure white surface under diffused architectural lighting. The scene is bright and airy, using a high-key light mode aesthetic with soft shadows. The product design is clean and industrial, embodying a sense of professional precision and modern technological sophistication within a minimalist environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQOb7vdNwA53lhPN0FvzrTlq0FMK-h8XF0lz2Pgxk2HwQDNT5aVWAFJCqnlATn8me381hYSTnmjCevWU3YnNjnTeerwXfUSEtdRiusmIZQzSqkwabxsdBu5rxMtwprGYgKT7vG3Gel4lh8RPktTSlXoToujawieG-chVVzQlBN2q7FbZOU_PJJFy4UanZVPcvTHmT822eop95YgRR5Eol2qQGUbdwzhEnOWKoJJisydq__P2qOz-DPtI5ZzEpPCru287rMKvCilkA"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-primary truncate">Logic Trackpad</h3>
+<p class="font-body-md text-on-surface-variant">Silver Aluminum</p>
+</div>
+<span class="font-data-lg text-data-lg text-primary">$129.00</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+<span class="font-label-caps text-label-caps text-[#10B981]">In Stock</span>
+</div>
+</div>
+<button class="h-10 px-6 bg-primary-container text-on-primary-container rounded-lg font-label-caps hover:bg-primary transition-all active:scale-95">
+                    ADD
+                </button>
+</div>
+<!-- Product Card 3: Low Stock -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex gap-4 items-center">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="4K Studio Monitor" class="w-full h-full object-cover" data-alt="A professional 4K studio monitor with a thin black bezel displaying a vibrant color test pattern. The scene is illuminated by soft, industrial studio lighting that highlights the screen's clarity. The environment is minimalist and organized, following a strict tonal layering style of whites and grays, emphasizing high-performance operational mastery and stability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsOQyfELnPjOvKl8E75PfoMbB0ZwQGOVP30i_EAJygvf9D2kjaGIrfRBOa3pAjH0kZ7WB2Tpmdg_BfwDY4kg3uG6bv_Jii4W2W_boF1GROU4ZDEvaPLoYuhup3fRU8jqNB7vdr3gcwvsr_lsjceIosdeIp_8XXINyfI2ZLKphPnOk0Psg037tJaJW3YvdVba9HHOnKpSnF-7EUiJCaPyrOI0K-vJi9_Jx1juvOwIEDsQ63kzw2e_bS_34yx6Z-RdzEiHZrgu6qh70"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-primary truncate">4K Studio Monitor</h3>
+<p class="font-body-md text-on-surface-variant">Ultra-Wide</p>
+</div>
+<span class="font-data-lg text-data-lg text-primary">$899.00</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-caps text-label-caps text-error">Low Stock (2 Left)</span>
+</div>
+</div>
+<button class="h-10 px-6 bg-primary-container text-on-primary-container rounded-lg font-label-caps hover:bg-primary transition-all active:scale-95">
+                    ADD
+                </button>
+</div>
+<!-- Product Card 4: Keyboard -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex gap-4 items-center">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<img alt="Mechanical K2" class="w-full h-full object-cover" data-alt="A minimalist mechanical keyboard with monochrome keycaps, captured in a top-down view on a light gray industrial surface. The lighting is even and bright, casting minimal soft shadows. The aesthetic focuses on functional clarity and architectural precision, utilizing a palette of deep blacks and surgical whites to evoke a sense of high-performance operational reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdunV_I5VgTvQgjLoWUQ9Fd3sJpQowRVfmtcs4VoObV5gNyDc_D4dmvDB2HOOjOo6UICKK0Yn0Ub7W45dPNnljvpjXpJBRslnTdqQM4A4e3RGoWZi1g3lGQ0CCrRJEc-AV5CD_rSnSuzMQvp9jdpPvkSXFw83qyKW4G-2knQybvtGNDWn8VJ0V343BBB8QvlNG4nnlnjIVQkgfk_SSaZ5muS5eY8r4lEvnwN6VK4W4pZM2ezyQkjmTSbKfHz7kk3oGuym_2OWBrxQ"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-primary truncate">Mechanical K2</h3>
+<p class="font-body-md text-on-surface-variant">Clicky White</p>
+</div>
+<span class="font-data-lg text-data-lg text-primary">$159.00</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 rounded-full bg-[#10B981]"></span>
+<span class="font-label-caps text-label-caps text-[#10B981]">In Stock</span>
+</div>
+</div>
+<button class="h-10 px-6 bg-primary-container text-on-primary-container rounded-lg font-label-caps hover:bg-primary transition-all active:scale-95">
+                    ADD
+                </button>
+</div>
+</div>
+<!-- Activity Feed Segment -->
+<section class="mt-xl">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase tracking-widest">Recent Activity</h2>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl divide-y divide-outline-variant">
+<div class="p-4 flex justify-between items-center">
+<div class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+<p class="font-body-md text-on-surface">5x Acoustic Pro added to shelf A12</p>
+</div>
+<span class="font-data-sm text-data-sm text-outline">12:45 PM</span>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+<p class="font-body-md text-on-surface">4K Studio Monitor stock alert</p>
+</div>
+<span class="font-data-sm text-data-sm text-outline">10:12 AM</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Summary Bar -->
+<div class="fixed bottom-20 left-0 w-full z-50 bg-white border-t border-outline-variant px-container-margin py-4 shadow-[0_-8px_24px_rgba(16,32,51,0.08)]">
+<div class="max-w-2xl mx-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">TOTAL IN CART</span>
+<p class="font-data-lg text-data-lg text-primary">1 Item • $349.00</p>
+</div>
+<button class="h-12 px-8 bg-primary-container text-on-primary-container rounded-lg font-h3 text-h3 flex items-center gap-2 hover:bg-primary transition-all active:scale-95 shadow-sm">
+                Review Cart
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Shared BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-white dark:bg-slate-900 pb-safe border-t border-slate-200 dark:border-slate-800 shadow-[0_-4px_12px_rgba(16,32,51,0.03)]">
+<button class="flex flex-col items-center justify-center text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 rounded-lg py-1 px-3 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Inventory</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 py-1 px-3 hover:text-slate-900 dark:hover:text-white active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="barcode_scanner">barcode_scanner</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Scanner</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 py-1 px-3 hover:text-slate-900 dark:hover:text-white active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Cart (3)</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 py-1 px-3 hover:text-slate-900 dark:hover:text-white active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider">Account</span>
+</button>
+</nav>
+</body></html>
