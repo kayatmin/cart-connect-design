@@ -12,11 +12,13 @@ The repo never stores the Stitch key.
 
 Runtime helpers try, in order:
 1. `STITCH_API_KEY` from the environment
-2. `/home/rog/knowledge-base/secrets/api-keys` or `.md`
+2. `STITCH_API_KEY_FILE` pointing at a local file that contains `STITCH_API_KEY=...`
 
 
 Expected line format:
 - `STITCH_API_KEY=...`
+
+Helpers intentionally do not search hardcoded personal directories or repo-relative `knowledge-base/secrets` fallbacks. Keep secret files outside the repo or in ignored local-only paths, and pass the exact file with `STITCH_API_KEY_FILE=/path/to/file`.
 
 ## Tooling choice
 
@@ -52,7 +54,7 @@ PROJECT_ID=<project-id> npm run stitch:export
 ## Current automation coverage
 
 - prompt generation from `design.md`
-- local key loading
+- explicit env/file key loading
 - Stitch doctor/proxy/tool listing helpers through `@google/stitch-sdk`
 - project export into `exports/<project-id>/screens/<screen-id>/`
 - MCP config examples for agent clients

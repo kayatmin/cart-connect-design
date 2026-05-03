@@ -28,13 +28,14 @@ Keep design intent, generated Stitch prompts, and exported mocks under version c
 
 ### 1. Stitch auth
 
-Preferred secret source:
-- `knowledge-base/secrets/api-keys`
+Supported secret sources, in preferred order:
+1. `STITCH_API_KEY` in the environment
+2. `STITCH_API_KEY_FILE` pointing at a local file that contains `STITCH_API_KEY=...`
 
 Expected pattern:
 - `STITCH_API_KEY=...`
 
-The helper scripts will also check a few common fallback locations if that file is not mounted.
+The helper scripts do not search repo-relative or personal secret paths. Keep secret files outside the repo or in ignored local-only paths.
 
 ### 2. Install local tooling
 
@@ -92,6 +93,6 @@ PROJECT_ID=<project-id> SCREEN=dashboard npm run stitch:generate:screen
 ## Notes
 
 - This repo does **not** store the Stitch API key.
-- The scripts load `STITCH_API_KEY` at runtime from env or the knowledge-base secrets file.
+- The scripts load `STITCH_API_KEY` at runtime from env or from the explicit `STITCH_API_KEY_FILE` path.
 - Stitch automation uses Google's `@google/stitch-sdk` package.
 - `design.md` should be updated before asking agents to generate new screens.

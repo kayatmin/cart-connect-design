@@ -6,3 +6,7 @@ exports/tmp/
 generated/tmp/
 .DS_Store
 *.log
+
+# Never copy local knowledge-base secrets into repos or build contexts.
+knowledge-base/secrets/
+**/knowledge-base/secrets/
